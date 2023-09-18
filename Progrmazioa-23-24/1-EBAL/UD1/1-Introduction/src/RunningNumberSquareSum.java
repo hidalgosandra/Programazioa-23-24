@@ -8,6 +8,6 @@ public class RunningNumberSquareSum {
             sum = sum + (number * number);
             number++;
         }
-        System.out.println("The sum from " + LOWERBOUND + " to " + UPPERBOUND + " is " + sum);
+        System.out.println("The product number from " + LOWERBOUND + " to " + UPPERBOUND + " is " + sum);
     }
 }
