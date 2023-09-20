@@ -3,7 +3,8 @@ public class CountWithFor {
         int count = 0; // Count the number within the range, init to 0
         int num = 111;
         for (int num2 = 8899; num <= num2; num++) {
-            ++count;
+            count++;
         }
+        System.out.println(count);
     }
 }
