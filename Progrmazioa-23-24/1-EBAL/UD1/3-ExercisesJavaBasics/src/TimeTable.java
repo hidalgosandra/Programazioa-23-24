@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class PrintTimeTable {
+public class TimeTable {
     public static void main(String[] args) {
         // Declare variables
         final int SIZE; // size of table to be input
