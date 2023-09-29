@@ -1,3 +1,5 @@
+package decisionloop;
+
 /* With a WHILE loop */
 
 public class Product1ToN {
