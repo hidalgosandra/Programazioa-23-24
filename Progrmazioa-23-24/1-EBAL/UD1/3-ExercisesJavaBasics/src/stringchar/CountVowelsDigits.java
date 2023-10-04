@@ -4,7 +4,7 @@ public class CountVowelsDigits {
     public static void main(String[] args) throws Exception {
 
         // Define variables
-        String inStr; // input String
+        java.lang.String inStr; // input String
         int inStrLen; // length of the input String
         int countVowels = 0;
         int countDigits = 0;
@@ -21,7 +21,7 @@ public class CountVowelsDigits {
         // Use inStr.charAt(index) in a loop to extract each character
         // The String's index begins at 0 from the left.
         // Process the String from the right
-        for (int charIdx = inStrLen - 1; charIdx >= 0; --charIdx) {
+        for (int charIdx = 0; charIdx < inStrLen; ++charIdx) {
             // charIdx = inStrLen-1, inStrLen-2, ... ,0
             if((inStr.charAt(charIdx) >= 'a' && inStr.charAt(charIdx) <= 'z')||(inStr.charAt(charIdx) >='A' && inStr.charAt(charIdx) <='Z')){
                 ++countVowels;
