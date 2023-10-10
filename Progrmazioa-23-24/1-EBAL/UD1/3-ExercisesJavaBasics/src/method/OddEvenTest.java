@@ -9,9 +9,9 @@ public class OddEvenTest {
         System.out.print("Enter a number: ");
         num = in.nextInt();
         System.out.println(num +" is an " + );
+    }
 
-        public static boolean isOdd(int number){
-            
-        }
+    public static boolean isOdd(int number) {
+
     }
 }
