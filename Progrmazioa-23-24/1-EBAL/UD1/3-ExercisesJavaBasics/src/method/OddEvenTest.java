@@ -8,10 +8,12 @@ public class OddEvenTest {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter a number: ");
         num = in.nextInt();
-        System.out.println(num +" is an " + );
+        System.out.println(num + " is an ");
+        in.close();
     }
 
     public static boolean isOdd(int number) {
+        return true;
 
     }
 }
