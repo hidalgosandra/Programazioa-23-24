@@ -7,6 +7,7 @@ public class UrtaroEleanitzak {
 
         System.out.println("URTAROAK\n=======================");
         System.out.printf("%-10s %-10s\n", "EUSKARAZ", "INGELESEZ");
+        System.out.println("-----------------------");
 
         for (int i = 0; i < urtaroakEuEn[0].length; i++) {
             System.out.printf("%-10s %-10s\n", urtaroakEuEn[0][i], urtaroakEuEn[1][i]);
