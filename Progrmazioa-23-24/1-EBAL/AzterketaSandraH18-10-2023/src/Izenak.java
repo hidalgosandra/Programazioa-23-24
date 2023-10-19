@@ -1,4 +1,3 @@
-package besteariketak;
 
 import java.util.Scanner;
 
