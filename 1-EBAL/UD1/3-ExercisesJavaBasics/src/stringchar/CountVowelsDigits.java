@@ -1,3 +1,5 @@
+package stringchar;
+
 import java.util.Scanner;
 
 public class CountVowelsDigits {

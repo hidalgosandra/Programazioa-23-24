@@ -1,3 +1,5 @@
+package stringchar;
+
 public class MyString {
     public static void main(String[] args) throws Exception {
         String hitza ="Asier6";

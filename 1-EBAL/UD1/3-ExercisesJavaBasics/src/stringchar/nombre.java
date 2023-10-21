@@ -1,3 +1,5 @@
+package stringchar;
+
 public class nombre {
     public static void main(String[] args) throws Exception {
         int batuketa = 0;
