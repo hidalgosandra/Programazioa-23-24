@@ -17,7 +17,29 @@ public class CaseAldatu {
         char[] karaktereak = testua.toCharArray(); // String-a karaktereetan banatu
         for (int i = 0; i < karaktereak.length; i++) {
             char letraKaraktere = karaktereak[i];
-            if (letra == 'M') {
+            switch (letra) {
+                case 'M':
+                    if (letraKaraktere >= 'a' && letraKaraktere <= 'z') {
+                        karaktereak[i] = (char) (letraKaraktere - 'a' + 'A');
+                    }
+                    break;
+                case 'm':
+                    if (letraKaraktere >= 'A' && letraKaraktere <= 'Z') {
+                        karaktereak[i] = (char) (letraKaraktere - 'A' + 'a');
+                    }
+                    break;
+                case 'G':
+                    if (letraKaraktere >= 'a' && letraKaraktere <= 'z') {
+                        karaktereak[i] = (char) (letraKaraktere - 'a' + 'A');
+                    } else if (letraKaraktere >= 'A' && letraKaraktere <= 'Z') {
+                        karaktereak[i] = (char) (letraKaraktere - 'A' + 'a');
+                    }
+                    break;
+                default:
+                    System.out.println("Sartu honetako letra bar (M, m edo G).");
+            }
+
+          /*   if (letra == 'M') {
                 if (letraKaraktere >= 'a' && letraKaraktere <= 'z') {
                     karaktereak[i] = (char) (letraKaraktere - 'a' + 'A');
                 }
@@ -31,7 +53,7 @@ public class CaseAldatu {
                 } else if (letraKaraktere >= 'A' && letraKaraktere <= 'Z') {
                     karaktereak[i] = (char) (letraKaraktere - 'A' + 'a');
                 }
-            }
+            } */
         }
         return new String(karaktereak); // Aldatutako karaktereak String bihurtu eta itzuli
     }
