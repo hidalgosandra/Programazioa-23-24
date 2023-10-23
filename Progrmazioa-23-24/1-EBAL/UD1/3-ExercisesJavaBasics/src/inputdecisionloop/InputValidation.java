@@ -1,3 +1,5 @@
+package inputdecisionloop;
+
 import java.util.Scanner;
 
 public class InputValidation {

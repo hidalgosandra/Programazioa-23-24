@@ -1,3 +1,5 @@
+package inputdecisionloop;
+
 import java.util.Scanner; // For keyboard input
 
 /**

@@ -1,3 +1,5 @@
+package array;
+
 public class ArrayenProg2 {
     public static void main(String[] args) {
         // Arrayaren tamaina definitu (100 zenbaki bikoiti gordeko ditugu)
