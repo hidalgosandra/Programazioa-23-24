@@ -2,7 +2,7 @@ package besteariketak;
 
 public class CaseAldatu {
     public static void main(String[] args) {
-        String aldaketak1 = caseAldatu("EIBAR", 'M');
+        String aldaketak1 = caseAldatu("EIBAR", 'm');
         String aldaketak2 = caseAldatu("ermua", 'M');
         String aldaketak3 = caseAldatu("Elgoibar", 'G');
         String aldaketak4 = caseAldatu("gaindituko dut", 'M');
