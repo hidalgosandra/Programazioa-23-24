@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense para saber los atributos posibles.
+    // Mantenga el puntero para ver las descripciones de los existentes atributos.
+    // Para más información, visite: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "FiveIntegerSum",
+            "request": "launch",
+            "mainClass": "FiveIntegerSum",
+            "projectName": "1-Introduction_98bd43d9"
+        },
+        {
+            "type": "java",
+            "name": "PrintCheckerPattern",
+            "request": "launch",
+            "mainClass": "PrintCheckerPattern",
+            "projectName": "1-Introduction_98bd43d9"
+        },
+        {
+            "type": "java",
+            "name": "PrintSheepPattern",
+            "request": "launch",
+            "mainClass": "PrintSheepPattern",
+            "projectName": "1-Introduction_98bd43d9"
+        },
+        {
+            "type": "java",
+            "name": "PrintSquarePattern",
+            "request": "launch",
+            "mainClass": "PrintSquarePattern",
+            "projectName": "1-Introduction_98bd43d9"
+        },
+        {
+            "type": "java",
+            "name": "PrintStarPattern",
+            "request": "launch",
+            "mainClass": "PrintStarPattern",
+            "projectName": "1-Introduction_98bd43d9"
+        },
+        {
+            "type": "java",
+            "name": "PrintTriangularPattern",
+            "request": "launch",
+            "mainClass": "PrintTriangularPattern",
+            "projectName": "1-Introduction_98bd43d9"
+        }
+    ]
+}
