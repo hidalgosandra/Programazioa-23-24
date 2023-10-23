@@ -18,14 +18,18 @@ public class CaseAldatu {
         for (int i = 0; i < karaktereak.length; i++) {
             char letraKaraktere = karaktereak[i];
             if (letra == 'M') {
-                karaktereak[i] = Character.toUpperCase(letraKaraktere);
+                if (letraKaraktere >= 'a' && letraKaraktere <= 'z') {
+                    karaktereak[i] = (char) (letraKaraktere - 'a' + 'A');
+                }
             } else if (letra == 'm') {
-                karaktereak[i] = Character.toLowerCase(letraKaraktere);
+                if (letraKaraktere >= 'A' && letraKaraktere <= 'Z') {
+                    karaktereak[i] = (char) (letraKaraktere - 'A' + 'a');
+                }
             } else if (letra == 'G') {
-                if (Character.isUpperCase(letraKaraktere)) {
-                    karaktereak[i] = Character.toLowerCase(letraKaraktere);
-                } else {
-                    karaktereak[i] = Character.toUpperCase(letraKaraktere);
+                if (letraKaraktere >= 'a' && letraKaraktere <= 'z') {
+                    karaktereak[i] = (char) (letraKaraktere - 'a' + 'A');
+                } else if (letraKaraktere >= 'A' && letraKaraktere <= 'Z') {
+                    karaktereak[i] = (char) (letraKaraktere - 'A' + 'a');
                 }
             }
         }
