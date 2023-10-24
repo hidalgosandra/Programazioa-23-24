@@ -1,3 +1,5 @@
+package nestedloops;
+
 import java.util.Scanner;
 
 public class SquarePattern {
