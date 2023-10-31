@@ -46,3 +46,5 @@ public class Laukia {
         return String.format("Laukia[" + zabalera + "x" + altuera + "]");
     }
 }
+
+Laukia L1 = new Laukia(7,1)
