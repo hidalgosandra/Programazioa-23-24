@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/PR-SVG-20010719/DTD/svg10.dtd">
+<svg width="44cm" height="26cm" viewBox="186 222 880 508" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g>
+    <rect style="fill: #ffffff" x="632.203" y="243.814" width="432.749" height="485.288"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="632.203" y="243.814" width="432.749" height="485.288"/>
+    <rect style="fill: #ffffff" x="632.203" y="223.814" width="111.8" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="632.203" y="223.814" width="111.8" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="634.203" y="237.814">exekutagarriak</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="187.282" y="252.513" width="432.749" height="469.519"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="187.282" y="252.513" width="432.749" height="469.519"/>
+    <rect style="fill: #ffffff" x="187.282" y="232.513" width="42.5" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="187.282" y="232.513" width="42.5" height="20"/>
+    <text font-size="12.7998" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="189.282" y="246.513">model</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="267.5" y="297" width="302.6" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="267.5" y="297" width="302.6" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="418.8" y="317">Laukia</text>
+    <rect style="fill: #ffffff" x="267.5" y="325" width="302.6" height="36"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="267.5" y="325" width="302.6" height="36"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="338.2">-zabalera: int = 5</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="354.2">-altuera: int = 5</text>
+    <rect style="fill: #ffffff" x="267.5" y="361" width="302.6" height="292"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="267.5" y="361" width="302.6" height="292"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="374.2">+Laukia()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="390.2">+Laukia(zab:int,alt:int)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="406.2">+getZabalera(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="422.2">+getAltuera(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="438.2">+getAzalera(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="454.2">+getPerimetroa(): int</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="470.2">+setZabalera(zabaleraBerria:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="486.2">+setAltuera(altueraBerria:int): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="502.2">+toString(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="518.2">+getMota(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="534.2">+marraztuBeteta(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="550.2">+marraztuHutsik(): void</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="566.2">+marraztuBeteta(ikurra:char)</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="582.2">+laukiBetea(): String</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="598.2">+handitu(double portzentaia)()</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="614.2">+isBiggerThan(l:Laukia): boolean</text>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="630.2">+getTheBiggest(lk:Laukia[]): Laukia</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="270.5" y1="631.8" x2="540" y2="631.8"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="270.5" y="646.2">+()</text>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="652.9" y="253.25" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="253.25" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="758" y="273.25">HiruLaukiSortu</text>
+    <rect style="fill: #ffffff" x="652.9" y="281.25" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="281.25" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="652.9" y="289.25" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="289.25" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="302.45">+main(args:String[]): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="304.05" x2="856.1" y2="304.05"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="652.9" y="341.1" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="341.1" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="758" y="361.1">LaukiBatSortu</text>
+    <rect style="fill: #ffffff" x="652.9" y="369.1" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="369.1" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="652.9" y="377.1" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="377.1" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="390.3">+main(args:String[]): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="391.9" x2="856.1" y2="391.9"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="652.9" y="428.95" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="428.95" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="758" y="448.95">LaukiAskoSortu</text>
+    <rect style="fill: #ffffff" x="652.9" y="456.95" width="210.2" height="8"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="456.95" width="210.2" height="8"/>
+    <rect style="fill: #ffffff" x="652.9" y="464.95" width="210.2" height="20"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="464.95" width="210.2" height="20"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="478.15">+main(args:String[]): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="479.75" x2="856.1" y2="479.75"/>
+  </g>
+  <g>
+    <rect style="fill: #ffffff" x="652.9" y="516.8" width="210.2" height="28"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="516.8" width="210.2" height="28"/>
+    <text font-size="16" style="fill: #000000;text-anchor:middle;font-family:sans-serif;font-style:normal;font-weight:700" x="758" y="536.8">Menua</text>
+    <rect style="fill: #ffffff" x="652.9" y="544.8" width="210.2" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="544.8" width="210.2" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="558">-LAUKI_KOP: int = 10</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="564.4" x2="809.9" y2="564.4"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="574">-sortutakoak: int</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="580.4" x2="786.8" y2="580.4"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="590">-laukiak: Laukia[]</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="596.4" x2="794.5" y2="596.4"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="606">+in: Scanner</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="612.4" x2="748.3" y2="612.4"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="622">+  </text>
+    <rect style="fill: #ffffff" x="652.9" y="628.8" width="210.2" height="84"/>
+    <rect style="fill: none; fill-opacity:0; stroke-width: 2; stroke: #000000" x="652.9" y="628.8" width="210.2" height="84"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="642">+main(args:String[]): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="643.6" x2="856.1" y2="643.6"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="658">+sortu(): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="659.6" x2="763.7" y2="659.6"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="674">+inprimatu(): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="675.6" x2="794.5" y2="675.6"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="690">+marraztu(): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="691.6" x2="786.8" y2="691.6"/>
+    <text font-size="12.8" style="fill: #000000;text-anchor:start;font-family:monospace;font-style:normal;font-weight:normal" x="655.9" y="706">+handiena(): void</text>
+    <line style="fill: none; fill-opacity:0; stroke-width: 1; stroke: #000000" x1="655.9" y1="707.6" x2="786.8" y2="707.6"/>
+  </g>
+</svg>
