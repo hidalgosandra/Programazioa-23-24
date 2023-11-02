@@ -23,7 +23,17 @@ public class LaukiAskoSortu {
             laukiak[i] = new Laukia(zabalera, altuera);
         }
         in.close();
-        
-        System.out.printf("%2.f", "Laukia", "Zabalera", "Altuera", "Azalera", "Perimetroa", "Mota");
+
+        System.out.printf("%10s %10s %10s %10s %10s %10s%n", "Laukia", "Zabalera", "Altuera", "Azalera", "Perimetroa",
+                "Mota");
+        for (int i = 0; i < kantitate; i++) {
+            Laukia laukia = laukiak[i];
+            int azalera = laukia.getAzalera();
+            int perimetroa = laukia.getPerimetroa();
+            String mota = laukia.getMota();
+
+            System.out.printf("%10d %10d %10d %10.2f %10.2f %10s%n", i + 1, laukia.getZabalera(), laukia.getAltuera(),
+                    azalera, perimetroa, mota);
+        }
     }
 }
