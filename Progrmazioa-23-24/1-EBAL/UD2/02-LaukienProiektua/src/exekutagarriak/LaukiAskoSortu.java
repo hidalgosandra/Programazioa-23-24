@@ -22,6 +22,8 @@ public class LaukiAskoSortu {
             altuera = in.nextInt();
             laukiak[i] = new Laukia(zabalera, altuera);
         }
+        in.close();
+        
         System.out.printf("%2.f", "Laukia", "Zabalera", "Altuera", "Azalera", "Perimetroa", "Mota");
     }
 }
