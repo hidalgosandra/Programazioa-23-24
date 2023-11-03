@@ -26,13 +26,14 @@ public class LaukiAskoSortu {
 
         System.out.printf("%10s %10s %10s %10s %10s %10s%n", "Laukia", "Zabalera", "Altuera", "Azalera", "Perimetroa",
                 "Mota");
+        System.out.println("======================================================================");
         for (int i = 0; i < kantitate; i++) {
             Laukia laukia = laukiak[i];
             int azalera = laukia.getAzalera();
             int perimetroa = laukia.getPerimetroa();
             String mota = laukia.getMota();
 
-            System.out.printf("%10d %10d %10d %10.2f %10.2f %10s%n", i + 1, laukia.getZabalera(), laukia.getAltuera(),
+            System.out.printf("%10d %10d %10d %10d %10d %10s%n", i + 1, laukia.getZabalera(), laukia.getAltuera(),
                     azalera, perimetroa, mota);
         }
     }

@@ -3,7 +3,6 @@ package model;
 public class Laukia {
     private int zabalera;
     private int altuera;
-    private String mota;
 
     public Laukia() {
         zabalera = 5;
@@ -44,7 +43,7 @@ public class Laukia {
     }
 
     public String toString() {
-        return String.format("Laukia [" + zabalera + "x" + altuera + "]");
+        return "Laukia [" + zabalera + "x" + altuera + "]";
     }
 
     public String getMota() {

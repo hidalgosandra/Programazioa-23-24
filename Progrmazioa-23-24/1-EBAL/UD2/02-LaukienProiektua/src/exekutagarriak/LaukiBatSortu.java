@@ -10,9 +10,9 @@ public class LaukiBatSortu {
         int zabalera;
         int altuera;
         Scanner in = new Scanner(System.in);
-        System.out.println("Sartu laukiaren zabalera: ");
+        System.out.print("Sartu laukiaren zabalera: ");
         zabalera = in.nextInt();
-        System.out.println("Sartu laukiaren altuera: ");
+        System.out.print("Sartu laukiaren altuera: ");
         altuera = in.nextInt();
         Laukia L1 = new Laukia(zabalera, altuera);
         String laukiaMota = L1.getMota();
@@ -23,6 +23,7 @@ public class LaukiBatSortu {
         L1.marraztuHutsik();
         System.out.print("Zein ikurrekin nahi duzu laukia bete? ");
         char ikur = in.next().charAt(0);
+        in.close();
         L1.marraztuBetetaC(ikur);
     }
 }
