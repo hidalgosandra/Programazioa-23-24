@@ -102,6 +102,13 @@ public class Laukia {
                 System.out.println();
             }
         }
-
     }
+
+    public boolean isBiggerThan(Laukia otherLaukia) {
+        int azaleraThis = getAzalera();
+        int azaleraOther = otherLaukia.getAzalera();
+
+        return azaleraThis > azaleraOther;
+    }
+
 }
