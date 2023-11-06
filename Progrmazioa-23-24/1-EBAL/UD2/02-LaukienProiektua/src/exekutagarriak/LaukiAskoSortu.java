@@ -24,7 +24,7 @@ public class LaukiAskoSortu {
         }
         in.close();
 
-        System.out.printf("%10s %10s %10s %10s %10s %10s%n", "Laukia", "Zabalera", "Altuera", "Azalera", "Perimetroa",
+        System.out.printf("%10s %10s %10s %10s %15s %10s%n", "Laukia", "Zabalera", "Altuera", "Azalera", "Perimetroa",
                 "Mota");
         System.out.println("======================================================================");
         for (int i = 0; i < kantitate; i++) {
@@ -33,7 +33,7 @@ public class LaukiAskoSortu {
             int perimetroa = laukia.getPerimetroa();
             String mota = laukia.getMota();
 
-            System.out.printf("%10d %10d %10d %10d %10d %10s%n", i + 1, laukia.getZabalera(), laukia.getAltuera(),
+            System.out.printf("%10d %10d %10d %10d %15d %10s%n", i + 1, laukia.getZabalera(), laukia.getAltuera(),
                     azalera, perimetroa, mota);
         }
     }
