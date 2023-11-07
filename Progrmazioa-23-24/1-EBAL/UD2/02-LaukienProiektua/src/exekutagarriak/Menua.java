@@ -5,13 +5,17 @@ import java.util.Scanner;
 import model.Laukia;
 
 public class Menua {
+    private final static int LAUKI_KOP = 10;
+    private static Laukia[] laukiak = new Laukia[LAUKI_KOP];
+    public static int sortutakoak = 0;
+    public static Scanner in = new Scanner(System.in);
+    private static int altuera;
+    private static int zabalera;
+
     public static void main(String[] args) {
         int cont = 1;
-        int LAUKI_KOP = 10;
-        int sortutakoak = 0;
-        Laukia[] laukiak = new Laukia[LAUKI_KOP];
         int au;
-        int altuera, zabalera;
+
         Scanner in = new Scanner(System.in);
         do {
             System.out.println("LAUKIAK");
@@ -25,37 +29,17 @@ public class Menua {
             au = in.nextInt();
             switch (au) {
                 case 1:
-                    System.out.println("");
-                    System.out.print("Sartu laukiaren zabalera: ");
-                    zabalera = in.nextInt();
-                    System.out.print("Sartu laukiaren altuera: ");
-                    altuera = in.nextInt();
-                    laukiak[0] = new Laukia(zabalera, altuera);
+                    sortu();
                     sortutakoak = sortutakoak + 1;
                     break;
                 case 2:
-                    System.out.println("---------------------------Laukien taula---------------------------------");
-                    System.out.println();
-                    System.out.printf("%10s %10s %10s %10s %15s %10s%n", "Laukia", "Zabalera", "Altuera", "Azalera",
-                            "Perimetroa",
-                            "Mota");
-                    System.out.println("=========================================================================");
-                    for (int i = 0; i < sortutakoak; i++) {
-                        Laukia laukia = laukiak[i];
-                        int azalera = laukia.getAzalera();
-                        int perimetroa = laukia.getPerimetroa();
-                        String mota = laukia.getMota();
-
-                        System.out.printf("%10d %10d %10d %10d %15d %10s%n", i + 1, laukia.getZabalera(),
-                                laukia.getAltuera(),
-                                azalera, perimetroa, mota);
-                    }
+                    imprimatu();
                     break;
                 case 3:
-                    System.out.println("-------------------------Lauki bat marraztu--------------------------------");
-                    System.out.println();
+                    marraztu();
                     break;
                 case 4:
+                    handiena();
                     break;
                 case 5:
                     System.out.println("Irtetzen...");
@@ -67,5 +51,51 @@ public class Menua {
             System.err.print("Beste operazio bat egin nahi duzu? 0= Ez / 1= Bai  ");
             cont = in.nextInt();
         } while (cont == 1);
+        in.close();
+    }
+
+    public static void sortu() {
+        System.out.println("");
+        System.out.print("Sartu laukiaren zabalera: ");
+        zabalera = in.nextInt();
+        System.out.print("Sartu laukiaren altuera: ");
+        altuera = in.nextInt();
+        laukiak[sortutakoak] = new Laukia(zabalera, altuera);
+    }
+
+    public static void imprimatu() {
+        System.out.println("---------------------------Laukien taula---------------------------------");
+        System.out.println();
+        System.out.printf("%10s %10s %10s %10s %15s %10s%n", "Laukia", "Zabalera", "Altuera", "Azalera",
+                "Perimetroa",
+                "Mota");
+        System.out.println("=========================================================================");
+        for (int i = 0; i < sortutakoak; i++) {
+            Laukia laukia = laukiak[i];
+            int azalera = laukia.getAzalera();
+            int perimetroa = laukia.getPerimetroa();
+            String mota = laukia.getMota();
+            System.out.printf("%10d %10d %10d %10d %15d %10s%n", i + 1, laukia.getZabalera(),
+                    laukia.getAltuera(),
+                    azalera, perimetroa, mota);
+        }
+    }
+
+    public static void marraztu() {
+        char m;
+        int laukZkia = 0;
+        System.out.println("Zenbatgarren laukia nahi duzu imprimatzea? ");
+
+        System.out.println("Betea ala hutsik (B/H)? ");
+        m = in.nextLine().charAt(0);
+        if (m == 'B' || m == 'b') {
+            laukiak[laukZkia - 1].marraztuBeteta();
+        } else if (m == 'H' || m == 'h') {
+            laukiak[laukZkia - 1].marraztuHutsik();
+        }
+    }
+
+    public static void handiena() {
+
     }
 }

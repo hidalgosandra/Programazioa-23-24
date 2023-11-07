@@ -1,5 +1,7 @@
 package model;
 
+import exekutagarriak.Menua;
+
 public class Laukia {
     private int zabalera;
     private int altuera;
@@ -109,6 +111,18 @@ public class Laukia {
         int azaleraOther = otherLaukia.getAzalera();
 
         return azaleraThis > azaleraOther;
+    }
+
+    public static Laukia getTheBiggest(Laukia[] laukiak) {
+
+        int handiena = 0;
+        for (int i = 1; i < Menua.sortutakoak; i++) {
+            if (laukiak[i].getAzalera() > laukiak[i - 1].getAzalera()) {
+                handiena = i;
+            }
+        }
+        return laukiak[handiena];
+
     }
 
 }
