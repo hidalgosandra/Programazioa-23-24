@@ -85,9 +85,9 @@ public class Menua {
         char m;
         int laukZkia = 0;
         System.out.println("Zenbatgarren laukia nahi duzu imprimatzea? ");
-
+        laukZkia = in.nextInt();
         System.out.println("Betea ala hutsik (B/H)? ");
-        m = in.nextLine().charAt(0);
+        m = in.next().charAt(0);
         if (m == 'B' || m == 'b') {
             laukiak[laukZkia - 1].marraztuBeteta();
         } else if (m == 'H' || m == 'h') {
@@ -96,6 +96,9 @@ public class Menua {
     }
 
     public static void handiena() {
+        String handiena;
 
+        handiena = (Laukia.getTheBiggest(laukiak)).toString();
+        System.out.println("Laukirik handiena hau da: " + handiena);
     }
 }
