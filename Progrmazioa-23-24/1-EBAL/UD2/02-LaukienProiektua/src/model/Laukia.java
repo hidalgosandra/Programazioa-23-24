@@ -122,7 +122,17 @@ public class Laukia {
             }
         }
         return laukiak[handiena];
-
     }
 
+    public static Laukia handitu(int zenbat) {
+        int altu = 0;
+        int zaba = 0;
+        if (zenbat > 0) {
+            altu = altu * zenbat;
+            zaba = zaba * zenbat;
+        }
+        .setAltuera(altu);
+        Laukia.setZabalera(zaba);
+        return altu + zaba;
+    }
 }
