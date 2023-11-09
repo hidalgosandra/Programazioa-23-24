@@ -117,7 +117,7 @@ public class Laukia {
 
         int handiena = 0;
         for (int i = 1; i < Menua.sortutakoak; i++) {
-            if (laukiak[i].getAzalera() > laukiak[i - 1].getAzalera()) {
+            if (laukiak[i].getAzalera() > laukiak[handiena].getAzalera()) {
                 handiena = i;
             }
         }

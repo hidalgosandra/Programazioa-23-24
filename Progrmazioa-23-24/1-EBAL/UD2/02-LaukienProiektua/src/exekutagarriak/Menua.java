@@ -1,5 +1,6 @@
 package exekutagarriak;
 
+import java.util.Random;
 import java.util.Scanner;
 
 import model.Laukia;
@@ -24,7 +25,8 @@ public class Menua {
             System.out.println("2- Laukien taula ikusi");
             System.out.println("3- Lauki bat marraztu");
             System.out.println("4- Lauki handiena bilatu");
-            System.out.println("5- Irten");
+            System.out.println("5- Laukiaren arraya bete");
+            System.out.println("6- Irten");
             System.out.print("Aukeratu zenbaki bat: ");
             au = in.nextInt();
             switch (au) {
@@ -42,6 +44,9 @@ public class Menua {
                     handiena();
                     break;
                 case 5:
+                    arrayBete();
+                    break;
+                case 6:
                     System.out.println("Irtetzen...");
                     System.exit(0);
                     break;
@@ -97,8 +102,19 @@ public class Menua {
 
     public static void handiena() {
         String handiena;
-
         handiena = (Laukia.getTheBiggest(laukiak)).toString();
         System.out.println("Laukirik handiena hau da: " + handiena);
     }
+
+    public static void arrayBete() {
+        Random random = new Random();
+        int upperbound = 11;
+        for (int i = sortutakoak; i < LAUKI_KOP; i++) {
+            int zabalera = random.nextInt(upperbound);
+            int altuera = random.nextInt(upperbound);
+            laukiak[i] = new Laukia(zabalera, altuera);
+            sortutakoak++;
+        }
+    }
+
 }
