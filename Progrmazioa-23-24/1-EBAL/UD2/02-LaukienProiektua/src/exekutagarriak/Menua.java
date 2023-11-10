@@ -26,7 +26,8 @@ public class Menua {
             System.out.println("3- Lauki bat marraztu");
             System.out.println("4- Lauki handiena bilatu");
             System.out.println("5- Laukiaren arraya bete");
-            System.out.println("6- Irten");
+            System.out.println("6- Handitu lauki bat");
+            System.out.println("7- Irten");
             System.out.print("Aukeratu zenbaki bat: ");
             au = in.nextInt();
             switch (au) {
@@ -47,6 +48,9 @@ public class Menua {
                     arrayBete();
                     break;
                 case 6:
+                    handitu();
+                    break;
+                case 7:
                     System.out.println("Irtetzen...");
                     System.exit(0);
                     break;
@@ -115,5 +119,17 @@ public class Menua {
             laukiak[i] = new Laukia(zabalera, altuera);
             sortutakoak++;
         }
+    }
+
+    public static void handitu() {
+        int l;
+        int h;
+        System.out.println("Zer lauki nahi duzu handitu? ");
+        l = in.nextInt();
+        System.out.println("Zenbat aldiz nahi duzu biderkatu? ");
+        h = in.nextInt();
+        Laukia laukiBerria = laukiak[l - 1].handitu(zabalera, altuera, h);
+        System.out.println("Berria: " + laukiBerria.toString());
+        System.out.println();
     }
 }

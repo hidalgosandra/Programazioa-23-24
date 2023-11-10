@@ -124,15 +124,13 @@ public class Laukia {
         return laukiak[handiena];
     }
 
-    public static Laukia handitu(int zenbat) {
+    public Laukia handitu(int zabalera, int altuera, int zenbat) {
         int altu = 0;
         int zaba = 0;
         if (zenbat > 0) {
-            altu = altu * zenbat;
-            zaba = zaba * zenbat;
+            altu = altuera * zenbat;
+            zaba = zabalera * zenbat;
         }
-        .setAltuera(altu);
-        Laukia.setZabalera(zaba);
-        return altu + zaba;
+        return new Laukia(zaba, altu);
     }
 }
