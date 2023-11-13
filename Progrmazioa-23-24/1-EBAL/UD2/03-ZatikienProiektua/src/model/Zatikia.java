@@ -4,10 +4,6 @@ public class Zatikia {
     private int zenbakitzailea;
     private int izendatzailea;
 
-    public Zatikia(String zattIdatzia) {
-        zattIdatzia = izendatzailea + "/" + zenbakitzailea;
-    }
-
     public Zatikia() {
         izendatzailea = 5;
         zenbakitzailea = 5;
@@ -16,6 +12,10 @@ public class Zatikia {
     public Zatikia(int zenbakitzailea, int izendatzailea) {
         this.zenbakitzailea = zenbakitzailea;
         this.izendatzailea = izendatzailea;
+    }
+
+    public Zatikia(String zattIdatzia) {
+        zattIdatzia = izendatzailea + "/" + zenbakitzailea;
     }
 
     public int getZenbakitzailea() {
@@ -47,8 +47,10 @@ public class Zatikia {
         return bid;
     }
 
-    public Zatikia batu(Zatikia za1, Zatikia zat1) {
-        Zatikia bat = new Zatikia(zenbakitzailea, izendatzailea);
+    public static Zatikia batu(Zatikia zat1, Zatikia zat2) {
+        Zatikia bat = new Zatikia();
+        bat.izendatzailea = zat1.izendatzailea * zat2.zenbakitzailea + zat2.izendatzailea * zat1.zenbakitzailea;
+        bat.zenbakitzailea = zat1.zenbakitzailea * zat2.zenbakitzailea;
         return bat;
     }
 
@@ -71,8 +73,12 @@ public class Zatikia {
 
     }
 
-    public void sinprifikatu() {
-
+    public void sinplifikatu() {
+        int komunFaktorea = zkh(izendatzailea, zenbakitzailea);
+        if (komunFaktorea > 1) {
+            izendatzailea = izendatzailea / komunFaktorea;
+            zenbakitzailea = zenbakitzailea / komunFaktorea;
+        }
     }
 
     public int mkt(int n1, int n2) {
