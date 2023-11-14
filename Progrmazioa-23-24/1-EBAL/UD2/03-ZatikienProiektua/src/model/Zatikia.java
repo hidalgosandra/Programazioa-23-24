@@ -5,8 +5,8 @@ public class Zatikia {
     private int izendatzailea;
 
     public Zatikia() {
-        izendatzailea = 5;
         zenbakitzailea = 5;
+        izendatzailea = 5;
     }
 
     public Zatikia(int zenbakitzailea, int izendatzailea) {
@@ -15,7 +15,17 @@ public class Zatikia {
     }
 
     public Zatikia(String zattIdatzia) {
-        zattIdatzia = izendatzailea + "/" + zenbakitzailea;
+        int marra = zattIdatzia.indexOf("/");
+        int strLen = zattIdatzia.length();
+
+        String goikoa = zattIdatzia.substring(0, marra);
+        String behekoa = zattIdatzia.substring(marra + 1, strLen);
+
+        int zenbakitzailea = Integer.parseInt(goikoa);
+        int izendatzailea = Integer.parseInt(behekoa);
+
+        this.zenbakitzailea = zenbakitzailea;
+        this.izendatzailea = izendatzailea;
     }
 
     public int getZenbakitzailea() {
@@ -36,21 +46,24 @@ public class Zatikia {
 
     public String toString() {
         String zat;
-        zat = izendatzailea + "/" + zenbakitzailea;
+        zat = zenbakitzailea + "/" + izendatzailea;
         return zat;
     }
 
-    public Zatikia biderkatu(Zatikia zat1, Zatikia zat2) {
-        Zatikia bid = new Zatikia(izendatzailea, zenbakitzailea);
-        bid.setIzendatzailea(zat1.getIzendatzailea() * zat2.getIzendatzailea());
+    public static Zatikia biderkatu(Zatikia zat1, Zatikia zat2) {
+        Zatikia bid = new Zatikia();
         bid.setZenbakitzailea(zat1.getZenbakitzailea() * zat2.getZenbakitzailea());
+        bid.setIzendatzailea(zat1.getIzendatzailea() * zat2.getIzendatzailea());
+        bid.sinplifikatu();
         return bid;
     }
 
     public static Zatikia batu(Zatikia zat1, Zatikia zat2) {
         Zatikia bat = new Zatikia();
-        bat.izendatzailea = zat1.izendatzailea * zat2.zenbakitzailea + zat2.izendatzailea * zat1.zenbakitzailea;
-        bat.zenbakitzailea = zat1.zenbakitzailea * zat2.zenbakitzailea;
+        bat.setZenbakitzailea((zat1.getZenbakitzailea() * zat2.getIzendatzailea())
+                + zat2.getZenbakitzailea() * zat1.getIzendatzailea());
+        bat.setIzendatzailea((zat1.getIzendatzailea() * zat2.getIzendatzailea()));
+        bat.sinplifikatu();
         return bat;
     }
 
@@ -74,11 +87,32 @@ public class Zatikia {
     }
 
     public void sinplifikatu() {
-        int komunFaktorea = zkh(izendatzailea, zenbakitzailea);
-        if (komunFaktorea > 1) {
-            izendatzailea = izendatzailea / komunFaktorea;
-            zenbakitzailea = zenbakitzailea / komunFaktorea;
+        int[] faktGoi = Zatikia.faktorizatu(this.getZenbakitzailea());
+        int[] faktBehe = Zatikia.faktorizatu(this.getIzendatzailea());
+
+        for (int i = 0; i < faktGoi.length; i++) {
+            for (int a = 0; a < faktBehe.length; a++) {
+                if (faktGoi[i] == faktBehe[a]) {
+                    faktBehe[a] = 1;
+                    faktGoi[i] = 1;
+                    break;
+                }
+            }
         }
+
+        int totalaZenbakitzailea = 1;
+        int totalaIzendatzailea = 1;
+
+        for (int i = 0; i < faktGoi.length; i++) {
+            totalaZenbakitzailea = totalaZenbakitzailea * faktGoi[i];
+        }
+
+        for (int i = 0; i < faktBehe.length; i++) {
+            totalaIzendatzailea = totalaIzendatzailea * faktBehe[i];
+        }
+
+        this.zenbakitzailea = totalaZenbakitzailea;
+        this.izendatzailea = totalaIzendatzailea;
     }
 
     public int mkt(int n1, int n2) {
@@ -91,9 +125,29 @@ public class Zatikia {
 
     }
 
-    public int[] faktorizatu(int n) {
-        return null;
-
+    public static int[] faktorizatu(int n) {
+        int cont = 0;
+        int temp = n;
+        while (temp > 1) {
+            for (int i = 2; i <= temp; i++) {
+                if (temp % i == 0) {
+                    temp = temp / i;
+                    cont++;
+                    break;
+                }
+            }
+        }
+        int[] emaitza = new int[cont];
+        for (int a = 0; n > 1; a++) {
+            for (int i = 2; i <= n; i++) {
+                if (n % i == 0) {
+                    n = n / i;
+                    emaitza[a] = i;
+                    break;
+                }
+            }
+        }
+        return emaitza;
     }
 
     public void zatikiakOrdenatu(Zatikia[] zatikiak) {
