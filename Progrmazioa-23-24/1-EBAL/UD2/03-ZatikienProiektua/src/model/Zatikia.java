@@ -78,9 +78,9 @@ public class Zatikia {
 
     public boolean isBaliokidea(Zatikia besteZatikiBat) {
         Zatikia bider1 = new Zatikia();
-        Zatikia bider2 = new Zatikia();
-        
-        if (bider1 == bider2) {
+        bider1 = Zatikia.biderkatu(bider1, besteZatikiBat);
+
+        if (bider1 == besteZatikiBat) {
             return true;
         } else {
             return false;
