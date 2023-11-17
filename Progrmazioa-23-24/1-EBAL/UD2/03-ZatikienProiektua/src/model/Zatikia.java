@@ -77,8 +77,14 @@ public class Zatikia {
     }
 
     public boolean isBaliokidea(Zatikia besteZatikiBat) {
-        return false;
-
+        Zatikia bider1 = new Zatikia();
+        Zatikia bider2 = new Zatikia();
+        
+        if (bider1 == bider2) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     public boolean isBiggerThan(Zatikia besteZatikiBat) {
