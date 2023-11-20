@@ -5,8 +5,8 @@ public class Zatikia {
     private int izendatzailea;
 
     public Zatikia() {
-        zenbakitzailea = 5;
-        izendatzailea = 5;
+        zenbakitzailea = (int) (Math.random() * 10) + 1;
+        izendatzailea = (int) (Math.random() * 10) + 1;
     }
 
     public Zatikia(int zenbakitzailea, int izendatzailea) {
@@ -72,30 +72,32 @@ public class Zatikia {
     }
 
     public double hamartarBaliokidea() {
-        return izendatzailea;
-
+        double hamartarra;
+        hamartarra = (double) this.getZenbakitzailea() / (double) this.getIzendatzailea();
+        return hamartarra;
     }
 
     public boolean isBaliokidea(Zatikia besteZatikiBat) {
-        Zatikia bider1 = new Zatikia();
-        bider1 = Zatikia.biderkatu(bider1, besteZatikiBat);
+        boolean baliokidea;
+        if (this.hamartarBaliokidea() == besteZatikiBat.hamartarBaliokidea()) {
+            baliokidea = true;
+        } else {
+            baliokidea = false;
+        }
+        return baliokidea;
+    }
 
-        if (bider1 == besteZatikiBat) {
+    public boolean isBiggerThan(Zatikia besteZatikiBat) {
+        if (this.hamartarBaliokidea() > besteZatikiBat.hamartarBaliokidea()) {
             return true;
         } else {
             return false;
         }
     }
 
-    public boolean isBiggerThan(Zatikia besteZatikiBat) {
-        return false;
-
-    }
-
     public void sinplifikatu() {
         int[] faktGoi = Zatikia.faktorizatu(this.getZenbakitzailea());
         int[] faktBehe = Zatikia.faktorizatu(this.getIzendatzailea());
-
         for (int i = 0; i < faktGoi.length; i++) {
             for (int a = 0; a < faktBehe.length; a++) {
                 if (faktGoi[i] == faktBehe[a]) {
@@ -105,18 +107,14 @@ public class Zatikia {
                 }
             }
         }
-
         int totalaZenbakitzailea = 1;
         int totalaIzendatzailea = 1;
-
         for (int i = 0; i < faktGoi.length; i++) {
             totalaZenbakitzailea = totalaZenbakitzailea * faktGoi[i];
         }
-
         for (int i = 0; i < faktBehe.length; i++) {
             totalaIzendatzailea = totalaIzendatzailea * faktBehe[i];
         }
-
         this.zenbakitzailea = totalaZenbakitzailea;
         this.izendatzailea = totalaIzendatzailea;
     }
