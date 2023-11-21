@@ -78,13 +78,11 @@ public class Zatikia {
     }
 
     public boolean isBaliokidea(Zatikia besteZatikiBat) {
-        boolean baliokidea;
         if (this.hamartarBaliokidea() == besteZatikiBat.hamartarBaliokidea()) {
-            baliokidea = true;
+            return true;
         } else {
-            baliokidea = false;
+            return false;
         }
-        return baliokidea;
     }
 
     public boolean isBiggerThan(Zatikia besteZatikiBat) {
