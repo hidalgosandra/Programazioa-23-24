@@ -59,10 +59,10 @@ public class Langilea {
         return langDatuak;
     }
 
-    public static String bilatu(String izen, Langilea langileak[]) {
+    public static Langilea bilatu(String izen, Langilea langileak[]) {
         for (int i = 0; i < langileak.length; i++) {
             if (langileak[i].getIzena().equals(izen)) {
-                return izen;
+                return langileak[i];
             }
         }
         return null;
