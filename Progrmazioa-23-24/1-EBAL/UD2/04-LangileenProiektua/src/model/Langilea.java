@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Scanner;
+
 public class Langilea {
     private int id;
     private String izena;
@@ -71,12 +73,46 @@ public class Langilea {
     public static Langilea[] nireHamarLagunLangile() {
         Langilea[] hamarLangile = new Langilea[10];
         String izenak[] = { "Aitor", "Sandra", "Oier", "Koldo", "Nerea", "Idoia", "Iker", "Sergio", "Asur", "Axel" };
-        String abizenak[] = { "Iriondo", "Hidalgo", "Dominguez", "Lopez", "Gomez", "Palomares", "Lopez", "Mendi",
-                "Letamendi", "Parachu" };
+        String abizenak[] = { "Iriondo", "Hidalgo", "Dominguez", "Lopez", "Gomez", "Lopez", "Palomares", "Letamentia",
+                "Mendi", "Parachu" };
         for (int i = 0; i < hamarLangile.length; i++) {
             hamarLangile[i] = new Langilea(i + 1, izenak[i], abizenak[i], ((i * 200.0) + 100.0));
         }
         return hamarLangile;
+    }
+
+    public static void langileakKontratatu(Langilea[] ehunLangileak, Scanner in) {
+        int id = bilatuLehenPosizioLibrea();
+
+        System.out.print("Zein da langile berriaren izena: ");
+        String izena = in.next();
+
+        System.out.print("Zein da langile berriaren abizena: ");
+        String abizena = in.next();
+
+        System.out.print("Zein da langilearen soldata: ");
+        double soldata = in.nextDouble();
+
+        for (int i = 0; i < ehunLangileak.length; i++) {
+            if (ehunLangileak[i] == null) {
+                ehunLangileak[i] = new Langilea(id, izena, abizena, soldata);
+                break;
+            }
+        }
+    }
+
+    public static int bilatuLehenPosizioLibrea() {
+        Langilea langileak[] = new Langilea[100];
+        Langilea langilea[] = Langilea.nireHamarLagunLangile();
+        for (int i = 0; i < langileak.length && i < langilea.length; i++) {
+            langileak[i] = langilea[i];
+        }
+        for (int i = 0; i < langileak.length; i++) {
+            if (langileak[i] == null) {
+                return i + 1;
+            }
+        }
+        return -1;
     }
 
 }
