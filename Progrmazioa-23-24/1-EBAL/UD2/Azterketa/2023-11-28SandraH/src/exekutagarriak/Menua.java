@@ -44,7 +44,7 @@ public class Menua {
                 case 3:
                     liburuaItzuli();
                     break;
-                case 5:
+                case 4:
                     System.out.println("Eskerrik asko programa hau erabiltzearren.");
                     break;
                 default:
@@ -63,17 +63,22 @@ public class Menua {
         System.out.println("===============================");
         System.out.printf("%3s %-10s %-25s %-24s %-12s %6s %-3s\n", "Z.", "Kodea", "Izenburua", "Egilea", "Hizkuntza",
                 "M.", "-");
-        for (int i = 0; i < kat.length; i++) {
-            boolean baiez = kat[i].isMailegatuta();
-            String mai;
-            if (baiez = true) {
-                mai = "Mailegatuta";
+        int i = 0;
+        while (i < kat.length) {
+            if (kat[i] != null) {
+                System.out.printf("%3s %-10s %-25s %-24s %-12s %6s %-3s\n", (i + 1), kat[i].getKodea(),
+                        kat[i].getIzenburua(), kat[i].getEgilea(), kat[i].getHizkuntzaOsoa(), kat[i].getUrtea(),
+                        kat[i].isMailegatuta() ? "M" : "E");
+                i++;
             } else {
-                mai = "Erabilgarria";
+                i++;
             }
-            System.out.printf("%3s %-10s %-25s %-24s %-12s %6s\n", kat[i].getKodea(), kat[i].getIzenburua(),
-                    kat[i].getEgilea(), kat[i].getHizkuntzaOsoa(), kat[i].getUrtea(), mai);
         }
+
+        if (i == 0) {
+            System.out.println("Ez daude liburu gehiago.");
+        }
+
     }
 
     /**
@@ -87,17 +92,22 @@ public class Menua {
      */
     public static void liburuaMailegatu() {
         // OSATU EZAZU METODO HAU
-        String kodLiburu = "0";
-        System.out.println("Zein da liburuaren kodea? ");
-        kodLiburu = in.nextLine();
-        libZenb = Liburua.liburuaBilatu(kodLiburu, kat);
-        if (libZenb != null) {
-            System.out.println("Zure izena: ");
-            izena = in.nextLine();
-            System.out.println("Mailegua behar bezala erregistratu da.");
-            liburuaMailegatu();
+        System.out.println("LIBRUA MAILEGATZE: ");
+        System.out.println("Hartu nahi duzun liburuaren kodea: ");
+        String kodea = in.nextLine();
+        Liburua lib = Liburua.liburuaBilatu(kodea, kat);
+        if (lib == null) {
+            System.out.println("Ez daukagu katalogoan kode hori daukan librururik.");
+        } else if (lib.isMailegatuta()) {
+            System.out.println("Sentitzen dugu baina momentu honetan liburu hori mailegatuta dago.");
         } else {
-            System.out.println("Ez daukagu katalogoan kode hori daukan libururik");
+            System.out.println("Sartu zure izena: ");
+            String irakurleIzena = in.nextLine();
+            if (lib.maileguaGehitu(new Mailegua(irakurleIzena))) {
+                lib.setMailegatuta(true);
+            } else {
+                lib.setMailegatuta(false);
+            }
         }
     }
 
@@ -108,12 +118,12 @@ public class Menua {
     public static void liburuaItzuli() {
         // OSATU EZAZU METODO HAU
         System.out.println("Itzuli nahi duzun liburuaren kodea: ");
-        String libItzulString = "a";
-        libItzulString = in.nextLine();
-        for (int i = 0; i < kat.length; i++) {
-            if (kat[i].equals(libItzulString)) {
-                System.out.println("Liburua ondo itzuli da.");
-            }
+        String kodea = in.nextLine();
+        Liburua lib = Liburua.liburuaBilatu(kodea, kat);
+        if (lib == null) {
+            System.out.println("Ez daukagu katalogoan kode hori daukan libururik.");
+        } else {
+            lib.liburuaItzuli();
         }
     }
 }

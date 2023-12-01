@@ -25,10 +25,13 @@ public class Liburua {
      */
     public Liburua(String izenburua, String egilea, char hizkuntza, int urtea) {
         // OSATU EZAZU KONSTRUKTORE HAU
+        this.kodea = egilea.substring(0, 4).toUpperCase() + "." + izenburua.substring(0, 4).toUpperCase();
         this.izenburua = izenburua;
         this.egilea = egilea;
-        this.hizkuntza = hizkuntza;
+        this.setHizkuntza(hizkuntza);
         this.urtea = urtea;
+        this.mailegatuta = false;
+        this.maileguak = new Mailegua[100];
     }
 
     /**
@@ -109,38 +112,44 @@ public class Liburua {
      */
     public void setHizkuntza(char hizkuntza) {
         // OSATU EZAZU METODO HAU
-        switch (hizkuntza) {
-            case 'e':
-                this.hizkuntza = 'E';
-                break;
-            case 'E':
-                this.hizkuntza = 'E';
-                break;
-            case 'g':
-                this.hizkuntza = 'G';
-                break;
-            case 'G':
-                this.hizkuntza = 'G';
-                break;
-            case 'i':
-                this.hizkuntza = 'I';
-                break;
-            case 'I':
-                this.hizkuntza = 'I';
-                break;
-            default:
-                this.hizkuntza = '-';
-                break;
+        if (hizkuntza == 'E' || hizkuntza == 'I' || hizkuntza == 'G') {
+            this.hizkuntza = hizkuntza;
         }
-        if (hizkuntza == 'e' || hizkuntza == 'E') {
-            hizkuntza = 'E';
-        } else if (hizkuntza == 'g' || hizkuntza == 'G') {
-            hizkuntza = 'G';
-        } else if (hizkuntza == 'i' || hizkuntza == 'I') {
-            hizkuntza = 'I';
-        } else {
-            hizkuntza = '-';
-        }
+
+        /*
+         * switch (hizkuntza) {
+         * case 'e':
+         * this.hizkuntza = 'E';
+         * break;
+         * case 'E':
+         * this.hizkuntza = 'E';
+         * break;
+         * case 'g':
+         * this.hizkuntza = 'G';
+         * break;
+         * case 'G':
+         * this.hizkuntza = 'G';
+         * break;
+         * case 'i':
+         * this.hizkuntza = 'I';
+         * break;
+         * case 'I':
+         * this.hizkuntza = 'I';
+         * break;
+         * default:
+         * this.hizkuntza = '-';
+         * break;
+         * }
+         * if (hizkuntza == 'e' || hizkuntza == 'E') {
+         * hizkuntza = 'E';
+         * } else if (hizkuntza == 'g' || hizkuntza == 'G') {
+         * hizkuntza = 'G';
+         * } else if (hizkuntza == 'i' || hizkuntza == 'I') {
+         * hizkuntza = 'I';
+         * } else {
+         * hizkuntza = '-';
+         * }
+         */
 
     }
 
@@ -192,8 +201,8 @@ public class Liburua {
         } else {
             mai = "Mailegatuta";
         }
-        infor = "\t Liburua: " + egilea + "." + izenburua + "\n \t Izenburua: " + izenburua
-                + "\n \t Egilea: " + egilea + "\n\t Hizkuntza: " + hizkuntza + "\n \t Urtea: " + urtea
+        infor = "\t Liburua: " + kodea + "\n \t Izenburua: " + izenburua
+                + "\n \t Egilea: " + egilea + "\n\t Hizkuntza: " + getHizkuntzaOsoa() + "\n \t Urtea: " + urtea
                 + "\n \t Egoera: " + mai;
         return infor;
     }
@@ -206,19 +215,7 @@ public class Liburua {
      */
     public int getMendea() {
         // OSATU EZAZU METODO HAU
-        int mendea = 0;
-        if (urtea > 0) {
-            if (urtea > 1800 && urtea < 1900) {
-                mendea = 19;
-            } else if (urtea > 1900 && urtea < 2000) {
-                mendea = 20;
-            } else if (urtea > 2000 && urtea < 3000) {
-                mendea = 21;
-            }
-        } else {
-            mendea = 0;
-        }
-        return mendea;
+        return urtea / 100 + 1;
     }
 
     /**
@@ -273,7 +270,7 @@ public class Liburua {
     public static Liburua liburuaBilatu(String kodea, Liburua[] liburuak) {
         // OSATU EZAZU METODO HAU
         for (int i = 0; i < liburuak.length; i++) {
-            if (liburuak[i].getKodea().equals(kodea)) {
+            if (liburuak[i] != null && liburuak[i].getKodea().equals(kodea)) {
                 return liburuak[i];
             }
         }
@@ -304,10 +301,10 @@ public class Liburua {
         // OSATU EZAZU METODO HAU
         int mailegatua = 1;
         for (int i = 0; i < maileguak.length; i++) {
-            if (i >= 50) {
-                mailegatua = 50;
+            if (maileguak[i] == null) {
+                return i;
             } else {
-                mailegatua = 1;
+                return i;
             }
         }
         return mailegatua;
@@ -319,13 +316,13 @@ public class Liburua {
      */
     public boolean maileguaGehitu(Mailegua m) {
         // OSATU EZAZU METODO HAU
-        for (int i = 0; i < maileguak.length; i++) {
-            if (maileguak[i] == null) {
-                maileguak[i] = m;
-                break;
-            }
+        int indizea = getMaileguKopurua();
+        if (indizea < maileguak.length) {
+            maileguak[getMaileguKopurua()] = m;
+            return true;
+        } else {
+            return false;
         }
-        return false;
     }
 
     /**
@@ -333,6 +330,7 @@ public class Liburua {
      */
     public void liburuaItzuli() {
         // OSATU EZAZU METODO HAU
-
+        this.maileguak[this.getMaileguKopurua() - 1].itzuli();
+        this.mailegatuta = false;
     }
 }
