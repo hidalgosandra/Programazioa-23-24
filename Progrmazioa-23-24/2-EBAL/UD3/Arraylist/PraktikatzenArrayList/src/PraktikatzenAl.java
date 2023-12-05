@@ -3,37 +3,38 @@ import java.util.Iterator;
 import java.util.Scanner;
 
 public class PraktikatzenAl {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         ArrayList<String> al = new ArrayList<String>();
-        Iterator<String> alIt = al.iterator();
-        int kop;
+        Iterator<String> alit = al.iterator();
+        int zenbat;
         String datua;
+
+        // Ask how many data the user wants to enter
         Scanner in = new Scanner(System.in);
-        System.out.println("Zenbat kopuru gorde nahi dituzu: ");
-        kop = in.nextInt();
-        for (int i = 0; i < kop; i++) {
-            System.out.println("Zer sartu nahi duzu? ");
-            datua = in.nextLine();
-            al.add(datua);
+        System.out.println("Zenbat datu sartu nahi dituzu:");
+        zenbat = in.nextInt();
+
+        // Get data and add to ArrayList
+        for (int i = 0; i < zenbat; i++) {
+            System.out.println("Tell me the String:");
+            al.add(in.next());
         }
-        System.out.println("Zer bilatu nahi duzu? ");
-        datua = in.nextLine();
-        for (int i = 0; i < kop; i++) {
-            if (al.contains(datua)) {
-                System.out.println(al.indexOf(datua));
-                break;
-            } else {
-                System.out.println("Ez dago zerrenda honetan datu hori.");
-            }
+
+        // Ask what variable to search for
+        System.out.println("Zer aldagai aurkitu nahi duzu:");
+        datua = in.next();
+
+        // Search for the variable in the ArrayList
+        if (al.contains(datua)) {
+            System.out.println("Aldagaia aurkitu da posizioan: " + al.indexOf(datua));
+        } else {
+            System.out.println("Ez da aurkitu");
         }
-        System.out.println("Zer datu nahi duzu komprobatu bat baino gehiago badagoen? ");
-        datua = in.nextLine();
-        while (kop < al.size()) {
-            if (al.indexOf(datua) == al.lastIndexOf(datua)) {
-                System.out.println("Aldi bakarra dago.");
-            } else {
-                System.out.println("Bat baino gehiagotan dago datua.");
-            }
+
+        // Display all entered data (using iterator)
+        System.out.println("Datuak:");
+        while (alit.hasNext()) {
+            System.out.println(alit.next());
         }
         in.close();
     }
