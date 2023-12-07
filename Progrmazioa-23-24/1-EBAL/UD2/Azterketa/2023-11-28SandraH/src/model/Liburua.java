@@ -1,5 +1,6 @@
 package model;
 
+import java.util.*;
 import java.time.LocalDate;
 
 public class Liburua {
@@ -11,6 +12,7 @@ public class Liburua {
     private int urtea; // Argitaratze urtea
     private boolean mailegatuta; // mailegatuta edo erabilgarri
     private Mailegua[] maileguak;// Liburu bakoitza 100 aldiz mailegatu ahal izango da
+    private ArrayList<Mailegua> Maileguak = new ArrayList<Mailegua>();
 
     /**
      * Kontutan izan:
@@ -31,7 +33,7 @@ public class Liburua {
         this.setHizkuntza(hizkuntza);
         this.urtea = urtea;
         this.mailegatuta = false;
-        this.maileguak = new Mailegua[100];
+        this.maileguak = maileguak;
     }
 
     /**
@@ -298,18 +300,8 @@ public class Liburua {
      * @return Mailegu kopurua
      */
     public int getMaileguKopurua() {
-        // OSATU EZAZU METODO HAU
-        int mailegatua = 1;
-        for (int i = 0; i < maileguak.length; i++) {
-            if (maileguak[i] == null) {
-                return i;
-            } else {
-                return i;
-            }
-        }
-        return mailegatua;
+        return Maileguak.size();
     }
-
     /**
      * Mailegu bat gehitzen du arrayko lehen posizio librean.
      * Lekurik geratzen ez bada false bueltatuko du.
