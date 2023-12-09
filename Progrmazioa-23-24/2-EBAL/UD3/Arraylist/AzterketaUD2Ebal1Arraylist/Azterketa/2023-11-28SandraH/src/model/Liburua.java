@@ -309,12 +309,8 @@ public class Liburua {
      */
     public boolean maileguaGehitu(Mailegua m) {
         // OSATU EZAZU METODO HAU
-        if (maileguak.equals(m)) {
-            Maileguak.add(m);
-            return true;
-        } else {
-            return false;
-        }
+        Maileguak.add(m);
+        return true;
     }
 
     /**
