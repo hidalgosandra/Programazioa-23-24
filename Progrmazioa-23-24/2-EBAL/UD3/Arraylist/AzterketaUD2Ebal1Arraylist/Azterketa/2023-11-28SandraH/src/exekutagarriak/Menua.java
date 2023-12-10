@@ -3,16 +3,17 @@ package exekutagarriak;
 import model.Liburua;
 import model.Mailegua;
 
+import java.util.ArrayList;
 import java.util.Scanner;
-
 import javax.sound.midi.Soundbank;
 
 public class Menua {
 
     private static Scanner in = new Scanner(System.in);
 
-    private static Liburua[] kat; // Liburua.getKatalogoa() metodoari deituta beteko dugu array hau.
-                                  // Beraz, 1000 elementuko arraya izango da.
+    private static ArrayList<Liburua> kat = new ArrayList<>(); // Liburua.getKatalogoa() metodoari deituta beteko dugu
+                                                               // array hau.
+    // Beraz, 1000 elementuko arraya izango da.
     static Liburua libZenb;
     static private String izena;
 
@@ -45,12 +46,18 @@ public class Menua {
                     liburuaItzuli();
                     break;
                 case 4:
+                    liburuaGehitu(libZenb);
+                    break;
+                case 5:
+                    liburuaEzabatu(izena, kat);
+                    break;
+                case 6:
                     System.out.println("Eskerrik asko programa hau erabiltzearren.");
                     break;
                 default:
                     System.out.println("Aukera okerra. Saiatu berriz.");
             }
-        } while (aukera != 4);
+        } while (aukera != 7);
     }
 
     /**
@@ -64,16 +71,12 @@ public class Menua {
         System.out.printf("%3s %-10s %-25s %-24s %-12s %6s %-3s\n", "Z.", "Kodea", "Izenburua", "Egilea", "Hizkuntza",
                 "M.", "-");
         int i = 0;
-        while (i < kat.length) {
-            if (kat[i] != null) {
-                System.out.printf("%3s %-10s %-25s %-24s %-12s %6s %-3s\n", (i + 1), kat[i].getKodea(),
-                        kat[i].getIzenburua(), kat[i].getEgilea(), kat[i].getHizkuntzaOsoa(), kat[i].getUrtea(),
-                        kat[i].isMailegatuta() ? "M" : "E");
-                i++;
-            } else {
+        while (i < kat.size()) {
+                System.out.printf("%3s %-10s %-25s %-24s %-12s %6s %-3s\n", (i + 1), kat.get(i).getKodea(),
+                        kat.get(i).getIzenburua(), kat.get(i).getEgilea(), kat.get(i).getHizkuntzaOsoa(), kat.get(i).getUrtea(),
+                        kat.get(i).isMailegatuta() ? "M" : "E");
                 i++;
             }
-        }
 
         if (i == 0) {
             System.out.println("Ez daude liburu gehiago.");
@@ -124,6 +127,18 @@ public class Menua {
             System.out.println("Ez daukagu katalogoan kode hori daukan libururik.");
         } else {
             lib.liburuaItzuli();
+        }
+    }
+
+    public static void liburuaGehitu(Liburua liburua) {
+        kat.add(liburua);
+    }
+
+    public static void liburuaEzabatu(String kode, ArrayList<Liburua> kat2) {
+        for (Liburua liburua : kat) {
+            if (kode == liburua.getKodea()) {
+                kat.remove(kode);
+            }
         }
     }
 }

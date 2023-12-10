@@ -13,6 +13,7 @@ public class Liburua {
     private boolean mailegatuta; // mailegatuta edo erabilgarri
     private Mailegua[] maileguak;// Liburu bakoitza 100 aldiz mailegatu ahal izango da
     private ArrayList<Mailegua> Maileguak = new ArrayList<Mailegua>();
+    public ArrayList<Liburua> Katalogoa = new ArrayList<Liburua>();
 
     /**
      * Kontutan izan:
@@ -228,36 +229,40 @@ public class Liburua {
      * @return Mila liburu gorde ditzakeen arraya bueltatzen du. Hutsuneak izan
      *         ditzake.
      */
-    public static Liburua[] getKatalogoa() {
-        Liburua[] katalogoa = new Liburua[1000];
+    public static ArrayList<Liburua> getKatalogoa() {
+        ArrayList<Liburua> Katalogoa = new ArrayList<>();
 
-        katalogoa[0] = new Liburua("East Wind:West Wind", "Pearl S.Buck", 'I', 1930);
-        katalogoa[1] = new Liburua("Dragon Seed", "Pearl S.Buck", 'I', 1944);
-        katalogoa[2] = new Liburua("Imperial Woman", "Pearl S.Buck", 'I', 1956);
-        katalogoa[3] = new Liburua("Letter from Peking", "Pearl S.Buck", 'I', 1957);
-        katalogoa[4] = new Liburua("Death in the Castle", "Pearl S.Buck", 'I', 1964);
+        Liburua liburua0 = new Liburua("East Wind:West Wind", "Pearl S.Buck", 'I', 1930);
+        Liburua liburua1 = new Liburua("Dragon Seed", "Pearl S.Buck", 'I', 1944);
+        Liburua liburua2 = new Liburua("Imperial Woman", "Pearl S.Buck", 'I', 1956);
+        Liburua liburua3 = new Liburua("Letter from Peking", "Pearl S.Buck", 'I', 1957);
+        Liburua liburua4 = new Liburua("Death in the Castle", "Pearl S.Buck", 'I', 1964);
 
-        katalogoa[10] = new Liburua("Obabakoak", "Atxaga", 'E', 1988);
-        katalogoa[11] = new Liburua("Behi eus. baten memoriak", "Atxaga", 'E', 1991);
-        katalogoa[12] = new Liburua("Sara izeneko gizona", "Atxaga", 'E', 1996);
-        katalogoa[13] = new Liburua("Soinujolearen semea", "Atxaga", 'E', 2003);
-        katalogoa[14] = new Liburua("Zazpi etxe Frantzian", "Atxaga", 'E', 2009);
-        katalogoa[15] = new Liburua("Nevadako Egunak", "Atxaga", 'E', 2013);
+        Liburua liburua10 = new Liburua("Obabakoak", "Atxaga", 'E', 1988);
+        Liburua liburua11 = new Liburua("Behi eus. baten memoriak", "Atxaga", 'E', 1991);
+        Liburua liburua12 = new Liburua("Sara izeneko gizona", "Atxaga", 'E', 1996);
+        Liburua liburua13 = new Liburua("Soinujolearen semea", "Atxaga", 'E', 2003);
+        Liburua liburua14 = new Liburua("Zazpi etxe Frantzian", "Atxaga", 'E', 2009);
+        Liburua liburua15 = new Liburua("Nevadako Egunak", "Atxaga", 'E', 2013);
 
-        katalogoa[20] = new Liburua("Aulki bat elurretan", "Uxue Alberdi", 'E', 2007);
-        katalogoa[21] = new Liburua("Euli giro", "Uxue Alberdi", 'E', 2013);
+        Liburua liburua20 = new Liburua("Aulki bat elurretan", "Uxue Alberdi", 'E', 2007);
+        Liburua liburua21 = new Liburua("Euli giro", "Uxue Alberdi", 'E', 2013);
 
-        katalogoa[31] = new Liburua("Basilika", "Itxaro Borda", 'E', 1985);
-        katalogoa[32] = new Liburua("Zeruetako Erresuma", "Itxaro Borda", 'E', 2005);
-        katalogoa[33] = new Liburua("Boga boga", "Itxaro Borda", 'E', 2012);
+        Liburua liburua31 = new Liburua("Basilika", "Itxaro Borda", 'E', 1985);
+        Liburua liburua32 = new Liburua("Zeruetako Erresuma", "Itxaro Borda", 'E', 2005);
+        Liburua liburua34 = new Liburua("Boga boga", "Itxaro Borda", 'E', 2012);
 
-        katalogoa[40] = new Liburua("Brujas", "Toti M.Lezea", 'G', 2006);
-        katalogoa[41] = new Liburua("Muerte en el priorato", "Toti M.Lezea", 'G', 2008);
+        Liburua liburua40 = new Liburua("Brujas", "Toti M.Lezea", 'G', 2006);
+        Liburua liburua41 = new Liburua("Muerte en el priorato", "Toti M.Lezea", 'G', 2008);
 
-        katalogoa[50] = new Liburua("Pride and Prejudice", "Jane Austen", 'I', 1813);
-        katalogoa[51] = new Liburua("Petit Prince", "Antoine Saint-Exupéry", 'F', 1943);
+        Liburua liburua50 = new Liburua("Pride and Prejudice", "Jane Austen", 'I', 1813);
+        Liburua liburua51 = new Liburua("Petit Prince", "Antoine Saint-Exupéry", 'F', 1943);
 
-        return katalogoa;
+        return Katalogoa;
+    }
+
+    private int size() {
+        return Katalogoa.size();
     }
 
     /**
@@ -265,15 +270,15 @@ public class Liburua {
      * parametro moduan jasoko dira.
      * 
      * @param kodea
-     * @param liburuak Liburu objektuen array bat. Arrayak hutsuneak izan ditzake.
-     *                 Liburu guztiek kode desberdina dutela ziurtatuta dago.
+     * @param kat   Liburu objektuen array bat. Arrayak hutsuneak izan ditzake.
+     *              Liburu guztiek kode desberdina dutela ziurtatuta dago.
      * @return Bilatzen gabiltzan liburu objektua edo null aurkitu ez bada
      */
-    public static Liburua liburuaBilatu(String kodea, Liburua[] liburuak) {
+    public static Liburua liburuaBilatu(String kodea, ArrayList<Liburua> kat) {
         // OSATU EZAZU METODO HAU
-        for (int i = 0; i < liburuak.length; i++) {
-            if (liburuak[i] != null && liburuak[i].getKodea().equals(kodea)) {
-                return liburuak[i];
+        for (int i = 0; i < kat.size(); i++) {
+            if(kodea == kat.get(i).getKodea()) {
+                return kat.get(i);
             }
         }
         return null;
@@ -321,4 +326,5 @@ public class Liburua {
         this.maileguak[this.getMaileguKopurua() - 1].itzuli();
         this.mailegatuta = false;
     }
+
 }
