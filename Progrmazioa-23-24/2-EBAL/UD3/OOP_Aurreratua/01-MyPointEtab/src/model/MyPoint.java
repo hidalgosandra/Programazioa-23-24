@@ -1,8 +1,8 @@
 package model;
 
 public class MyPoint {
-    private int x;
-    private int y;
+    public int x;
+    public int y;
 
     public MyPoint() {
         x = 5;
