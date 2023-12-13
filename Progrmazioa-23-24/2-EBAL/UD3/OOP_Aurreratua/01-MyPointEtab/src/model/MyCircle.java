@@ -23,15 +23,17 @@ public class MyCircle extends MyPoint {
     }
 
     public double distance(MyCircle another) {
+        double dist;
+        MyCircle one = new MyCircle(0, 0, 0);
+    }
 
     }
 
     public boolean isInside(MyPoint puntua) {
-        boolean inside = false;
-        if(){
-            inside = true;
-        }else{
-            inside = false;
+        if (puntua == center) {
+            return true;
+        } else {
+            return false;
         }
     }
 
