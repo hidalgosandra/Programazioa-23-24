@@ -5,6 +5,7 @@ import model.MyPoint;
 public class MyCircle extends MyPoint {
     private MyPoint center = new MyPoint(0, 0);
     private int radius = 1;
+}
 
     public MyCircle() {
         this.center = center;
@@ -23,10 +24,9 @@ public class MyCircle extends MyPoint {
     }
 
     public double distance(MyCircle another) {
-        double dist;
+        double dist = 0.0;
         MyCircle one = new MyCircle(0, 0, 0);
-    }
-
+        return dist;
     }
 
     public boolean isInside(MyPoint puntua) {
