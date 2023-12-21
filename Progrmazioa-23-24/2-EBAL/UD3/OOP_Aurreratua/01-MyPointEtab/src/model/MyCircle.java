@@ -1,94 +1,60 @@
 package model;
 
-import model.MyPoint;
-
 public class MyCircle extends MyPoint {
-    private MyPoint center = new MyPoint(0, 0);
-    private int radius = 1;
-}
+    private double radius;
+    private String color;
 
     public MyCircle() {
-        this.center = center;
-        this.radius = 0;
+
+    }
+
+    public MyCircle(int i, int j, double radius2) {
+        this.radius = 1;
     }
 
     public MyCircle(int x, int y, int radius) {
-        this.x = x;
-        this.y = y;
+        super(x, y);
         this.radius = radius;
     }
 
     public MyCircle(MyPoint center, int radius) {
-        this.center = center;
+        super(center.getX(), center.getY());
         this.radius = radius;
     }
 
-    public double distance(MyCircle another) {
-        double dist = 0.0;
-        MyCircle one = new MyCircle(0, 0, 0);
-        return dist;
+    public MyCircle(double radius2, String color) {
     }
 
-    public boolean isInside(MyPoint puntua) {
-        if (puntua == center) {
-            return true;
-        } else {
-            return false;
-        }
+    public double distance(MyCircle another) {
+        // You need to implement the distance calculation
+        return 0.0;
+    }
+
+    public boolean isInside(MyPoint point) {
+        // You need to implement the isInside method
+        return false;
     }
 
     public double getArea() {
-        double area = 0.0;
-
-        return area;
+        // You need to implement the getArea method
+        return 0.0;
     }
 
-    public MyPoint getCenter() {
-        return center;
-    }
-
-    public int getCenterX() {
-
-    }
-
-    public int getCenterY() {
-
-    }
-
-    public int[] getCenterXY() {
-
-    }
-
-    public double getCircumference() {
-
-    }
-
-    public int getRadius() {
+    public double getRadius() {
         return radius;
-    }
-
-    public void setCenter(MyPoint center) {
-        this.center = center;
-    }
-
-    public void setCenterX(int x) {
-        this.x = x;
-    }
-
-    public void setCenterY(int y) {
-        this.y = y;
-    }
-
-    public void setCenterXY(int x, int y) {
-        this.x = x;
-        this.y = y;
     }
 
     public void setRadius(int radius) {
         this.radius = radius;
     }
 
-    public String toString() {
+    // Other getter and setter methods go here
 
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getColor(String color) {
+        return color;
     }
 }
