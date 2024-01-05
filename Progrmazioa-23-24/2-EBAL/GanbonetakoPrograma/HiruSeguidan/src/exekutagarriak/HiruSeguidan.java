@@ -2,79 +2,76 @@ package exekutagarriak;
 
 import java.util.Scanner;
 
-import model.MyTable;
+import model.NireTabla;
 
 public class HiruSeguidan {
-
-    static Scanner teclado = new Scanner(System.in);
-
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
 
-        MyTable partida1 = new MyTable();
+        NireTabla partida1 = new NireTabla();
 
-        int fila, columna;
-        boolean posValida, correcto;
+        int lerroa, zutabea;
+        boolean posizioOna, libre;
 
-        // No salimos hasta que uno gane o no haya mas posibilidades
-        while (!partida1.finPartida()) {
+        // Irten ez arte, bata irabazten edo aukera gehiago ez dagoenean
+        while (!partida1.bukaera()) {
 
             do {
 
-                // mostramos el jugador al que le toca
-                partida1.mostrarTurnoActual();
+                // Jokalariari toka zaio erakutsi
+                partida1.txandaErakutsi();
+                // Taula erakutsi
+                partida1.taulaErakutsi();
+                libre = false;
+                lerroa = eskatuZenbakiBat("Eman lerroa");
+                zutabea = eskatuZenbakiBat("Eman zutabea");
 
-                // muestro el tablero
-                partida1.mostrarTablero();
+                // Posizioa balioztatu
+                posizioOna = partida1.balidatuPos(lerroa, zutabea);
 
-                correcto = false;
-                fila = pedirInteger("Dame la fila");
-                columna = pedirInteger("Dame la columna");
+                // Balioztatua denean, markarik ez badago
+                if (posizioOna) {
 
-                // Validamos la posicion
-                posValida = partida1.validarPosicion(fila, columna);
-
-                // Si es valido, comprobamos que no haya ninguna marca
-                if (posValida) {
-
-                    // Si no hay marca, significa que es correcto
-                    if (!partida1.hayValorPosicion(fila, columna)) {
-                        correcto = true;
+                    // Markarik ez badago, libre da
+                    if (!partida1.balioaPos(lerroa, zutabea)) {
+                        libre = true;
                     } else {
-                        System.out.println("Ya hay una marca en esa posicion");
+                        System.out.println("Posizio hartan dago marka bat dagoela esan duzu");
                     }
                 } else {
-                    System.out.println("La posicion no es valida");
+                    System.out.println("Posizioa ez da baliozkoa");
                 }
 
-                // Mientras no sea correcto, no salgo
-            } while (!correcto);
+                // Libre ez bada, irten ez
+            } while (!libre);
 
-            // depende del turno, inserta un simbolo u otro
-            partida1.insertarEn(fila, columna);
+            // Txandaren arabera, ikur bat edo bestea sartu
+            partida1.betePos(lerroa, zutabea);
 
-            partida1.cambiaTurno();
+            partida1.txandaAldatu();
         }
 
-        // Muestra el tablero
-        partida1.mostrarTablero();
+        // Taula erakutsi
+        partida1.taulaErakutsi();
 
-        // Mostramos el ganador
-        partida1.mostrarGanador();
+        // Irabazlea erakutsi
+        partida1.erakutsiIrabazlea();
 
+        in.close();
     }
 
     /**
-     * Pedimos un numero y lo devolvemos
+     * Zenbaki bat eskatu eta itzuli
      *
-     * @param mensaje
+     * @param mezua
      * @return
      */
-    public static int pedirInteger(String mensaje) {
-
-        System.out.println(mensaje);
-        int numero = teclado.nextInt();
-
-        return numero;
+    public static int eskatuZenbakiBat(String mezua) {
+        Scanner in = new Scanner(System.in);
+        System.out.println(mezua);
+        int zenbakia = in.nextInt();
+        in.close();
+        return zenbakia;
 
     }
 
