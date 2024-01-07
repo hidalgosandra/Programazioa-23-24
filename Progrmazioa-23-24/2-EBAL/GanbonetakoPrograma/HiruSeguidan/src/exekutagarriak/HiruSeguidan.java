@@ -56,8 +56,6 @@ public class HiruSeguidan {
 
         // Irabazlea erakutsi
         partida1.erakutsiIrabazlea();
-
-        in.close();
     }
 
     /**
@@ -70,7 +68,6 @@ public class HiruSeguidan {
         Scanner in = new Scanner(System.in);
         System.out.println(mezua);
         int zenbakia = in.nextInt();
-        in.close();
         return zenbakia;
 
     }

@@ -1,18 +1,45 @@
-## Getting Started
+# Hizkuntza Modeloa - Hiru eta erdi
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## NireTabla Klasea
 
-## Folder Structure
+NireTabla klasea hiru eta erdi jokoa inplementatzen du Java programazio-lengoaian. Hau da, hiru lerro eta hiru zutabe dituen taula batean jokatzen da. Klaseak metodo desberdinak ditu, eta hauek dira bere funtzio nagusiak:
 
-The workspace contains two folders by default, where:
+### Hasierako Ezaugarriak
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- `J1`, `J2`, eta `hutsa`: Ikurrak eta hutsaren ikurra definitzen dituzten konstanteak.
+- `txanda`: Jokoen txanda zehazten duen boolean aldagaia.
+- `taula`: Hiru lerro eta hiru zutabe dituen matrizea, jokoa gordetzeko erabiliko dena.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+### Metodo Nagusiak
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+- `NireTabla()`: Eraikitzailea, klasea hasieratzen du.
+- `bukaera()`: Jokoak amaitu den edo irabazlea dagoeneko bukatu den egiaztatzen du.
+- `taulaBeteta()`: Taula beteta dagoen ala ez egiaztatzen du.
+- `lerroanKoinzidentzia()`: Lerro batean koinzidentzia bat dagoen ala ez egiaztatzen du.
+- `zutabeanKoinzidentzia()`: Zutabe batean koinzidentzia bat dagoen ala ez egiaztatzen du.
+- `diagonalKoinzidentzia()`: Diagona batean koinzidentzia bat dagoen ala ez egiaztatzen du.
+- `erakutsiIrabazlea()`: Irabazlea erakutsi, eta nork irabazi duen jakin.
+- `txandaAldatu()`: Jokoen txanda aldatzen du.
+- `betePos(int lerro, int zutabe)`: Matrizean posizio bati ikur bat sartzen du.
+- `taulaErakutsi()`: Matrizea erakutsi.
+- `txandaErakutsi()`: Uneko txanda erakutsi.
+- `balidatuPos(int lerro, int zutabe)`: Sartutako posizioa balioztatu.
+- `balioaPos(int lerro, int zutabe)`: Posizio batean marka bat dagoen ala ez adierazi.
 
-## Dependency Management
+### Erabilera
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+1. `NireTabla nireTaula = new NireTabla();`: NireTabla klasearen instantzia bat sortu.
+2. `nireTaula.taulaErakutsi();`: Jokoaren taula erakutsi.
+3. `nireTaula.txandaErakutsi();`: Uneko txanda erakutsi.
+4. `nireTaula.betePos(1, 1);`: Matrizean posizio bati ikur bat sartu.
+5. `nireTaula.bukaera();`: Jokoaren bukaera egiaztatu.
+
+### Oharrak
+
+- Programak euskaraz dago, hizkuntza erabilgarria aldatu nahi baldin bada, testuak aldatu beharko dira ere.
+- Klasea erabiliz hiru eta erdi jokoa jokatu daiteke, erabilera argitaratu behar da.
+- Beste funtzio eta metodo gehiago gehitu daitezke, hainbat aukera gehitzeko.
+
+## Eskerrak
+
+Programa hau NireTabla klasearen bitartez hiru eta erdi jokoa garatzeko erabil daiteke. Eskerrik asko gure erabilera hartu duzulako!
