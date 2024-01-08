@@ -5,10 +5,18 @@ import model.enumerazioak.Demarkazioa;
 public class Futbolaria {
     private int dortsala;
     private Demarkazioa demarkazioa;
+    String izena;
+    String abizena;
+    int adina;
+    int id;
 
     public Futbolaria(int dortsala, String izena, String abizena, int adina, int id, Demarkazioa demarkazioa) {
         this.dortsala = dortsala;
         this.demarkazioa = demarkazioa;
+        this.izena = izena;
+        this.abizena = abizena;
+        this.adina = adina;
+        this.id = id;
     }
 
     public int getDortsala() {
@@ -33,5 +41,10 @@ public class Futbolaria {
 
     public Futbolaria partidaJolastu() {
         return null;
+    }
+
+    public String toString() {
+        return "Izena: " + izena + "\t Abizena: " + abizena + "\t Adina:" + adina + "\t Id: " + id + "\t Demarkazioa: "
+                + demarkazioa;
     }
 }
