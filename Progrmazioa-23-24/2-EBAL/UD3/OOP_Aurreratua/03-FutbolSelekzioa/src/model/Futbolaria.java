@@ -6,7 +6,7 @@ public class Futbolaria {
     private int dortsala;
     private Demarkazioa demarkazioa;
 
-    public Futbolaria(int dortsala, Demarkazioa demarkazioa) {
+    public Futbolaria(int dortsala, String izena, String abizena, int adina, int id, Demarkazioa demarkazioa) {
         this.dortsala = dortsala;
         this.demarkazioa = demarkazioa;
     }
