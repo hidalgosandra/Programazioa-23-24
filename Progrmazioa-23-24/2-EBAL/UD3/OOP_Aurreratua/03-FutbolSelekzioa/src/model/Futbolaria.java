@@ -2,7 +2,7 @@ package model;
 
 import model.enumerazioak.Demarkazioa;
 
-public class Futbolaria {
+public class Futbolaria extends Kidea {
     private int dortsala;
     private Demarkazioa demarkazioa;
     String izena;
@@ -11,12 +11,9 @@ public class Futbolaria {
     int id;
 
     public Futbolaria(int dortsala, String izena, String abizena, int adina, int id, Demarkazioa demarkazioa) {
+        super(id, izena, abizena, adina);
         this.dortsala = dortsala;
         this.demarkazioa = demarkazioa;
-        this.izena = izena;
-        this.abizena = abizena;
-        this.adina = adina;
-        this.id = id;
     }
 
     public int getDortsala() {
@@ -44,7 +41,7 @@ public class Futbolaria {
     }
 
     public String toString() {
-        return "Izena: " + izena + "\t Abizena: " + abizena + "\t Adina:" + adina + "\t Id: " + id + "\t Demarkazioa: "
+        return " Id: " + id + "\t Izena: " + izena + "\t Abizena: " + abizena + "\t Adina:" + adina + "\t Demarkazioa: "
                 + demarkazioa;
     }
 }
