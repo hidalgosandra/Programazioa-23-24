@@ -10,9 +10,7 @@ public class Atezaina extends Futbolaria {
         this.geratutakoGolak = geratutakoGolak;
     }
 
-    public Atezaina golaGeratu() {
+    public void golaGeratu() {
         geratutakoGolak = geratutakoGolak + 1;
-        return null;
-
     }
 }

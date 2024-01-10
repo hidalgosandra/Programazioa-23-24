@@ -11,7 +11,7 @@ public class Selekzioa {
     public Herria herria;
 
     public Selekzioa(String herrialdea) {
-        if (herria.equals("Euskadi")) {
+        if (herrialdea.equals("Euskadi")) { // https://es.wikipedia.org/wiki/Selecci%C3%B3n_de_f%C3%BAtbol_de_Euskadi
             this.herria = Herria.eus;
             kideak.add(new Futbolaria(++azkenId, "Aitor", "Fernandez", 32, 1, Demarkazioa.POR));
             kideak.add(new Futbolaria(++azkenId, "Unai", "Bustinza", 31, 2, Demarkazioa.DEF));
@@ -33,7 +33,7 @@ public class Selekzioa {
             kideak.add(new Futbolaria(++azkenId, "Inigo", "Johnson", 28, 18, Demarkazioa.DEF));
             kideak.add(new Futbolaria(++azkenId, "Francisco", "Domino", 29, 19, Demarkazioa.DEF));
 
-        } else if (herria.equals("Rumania")) {
+        } else if (herrialdea.equals("Rumania")) { // https://en.wikipedia.org/wiki/Romania_national_football_team#Players
             herria = Herria.ro;
             kideak.add(new Futbolaria(++azkenId, "Horatiu", "Moldovan", 25, 1, Demarkazioa.POR));
 
@@ -43,16 +43,39 @@ public class Selekzioa {
     }
 
     public void kideakBistaratu() {
+        System.out.printf("%-3s%-15s%-15s%-7s%-9s%-12s%s\n", "ID", "Izena", "Abizena", "Adina", "Dortsala",
+                "Demarkazioa", "Herria");
         for (int i = 0; i < kideak.size(); i++) {
             Kidea k = kideak.get(i);
-            System.out.println("ID: " + k.getId() + "/t Izena: " + k.getIzena() + "/t Abizena: " + k.getAbizena()
-                    + "/t Adina" + k.getAdina() + "/t Dortsala: " + ((Futbolaria) k).getDortsala() + "/t Demarkazioa: "
-                    + ((Futbolaria) k).getDemarkazioa());
+            System.out.printf("%-3d%-15s%-15s%-7d%-9d%-12s%s\n",
+                    k.getId(), k.getIzena(), k.getAbizena(), k.getAdina(), ((Futbolaria) k).getDortsala(),
+                    ((Futbolaria) k).getDemarkazioa(), herria);
         }
+        System.out.println("\n");
     }
 
     public void kideakTaldekatutaBistaratu() {
+        if (herria == Herria.eus) {
+            System.out.println("SELEKZIOA: " + herria);
+            System.out.println("==========================================");
+            System.out.println("FUTBOLARIAK");
+            System.out.println("-------------------");
+            String dem;
+            for (Kidea k : kideak) {
+                if (Demarkazioa.POR.equals(((Futbolaria) k).getDemarkazioa())) {
+                    dem = "Atezaina";
+                } else if (Demarkazioa.DEL.equals(((Futbolaria) k).getDemarkazioa())
+                        || Demarkazioa.DEF.equals(((Futbolaria) k).getDemarkazioa())
+                        || Demarkazioa.MED.equals(((Futbolaria) k).getDemarkazioa())) {
+                            dem = "Futbolaria";
+                }else{
+                    
+                }
+            }
 
+            System.out.println("-------------------");
+            System.out.println("Guztira: " + kideak.size() + " futbolari");
+        }
     }
 
     public ArrayList<Kidea> getKideak() {
