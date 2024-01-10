@@ -55,24 +55,24 @@ public class Selekzioa {
     }
 
     public void kideakTaldekatutaBistaratu() {
+        System.out.println("SELEKZIOA: " + herria);
+        System.out.println("==========================================");
+        System.out.println("FUTBOLARIAK");
+        System.out.println("-------------------");
+        String dem;
         if (herria == Herria.eus) {
-            System.out.println("SELEKZIOA: " + herria);
-            System.out.println("==========================================");
-            System.out.println("FUTBOLARIAK");
-            System.out.println("-------------------");
-            String dem;
             for (Kidea k : kideak) {
                 if (Demarkazioa.POR.equals(((Futbolaria) k).getDemarkazioa())) {
                     dem = "Atezaina";
                 } else if (Demarkazioa.DEL.equals(((Futbolaria) k).getDemarkazioa())
                         || Demarkazioa.DEF.equals(((Futbolaria) k).getDemarkazioa())
                         || Demarkazioa.MED.equals(((Futbolaria) k).getDemarkazioa())) {
-                            dem = "Futbolaria";
-                }else{
-                    
+                    dem = "Futbolaria";
+                } else {
+
                 }
             }
-
+            
             System.out.println("-------------------");
             System.out.println("Guztira: " + kideak.size() + " futbolari");
         }
