@@ -72,7 +72,7 @@ public class Selekzioa {
                 } else {
                     System.out.println(".");
                 }
-                System.out.println(dem + "id= " + k.getId() + "izena: " + k.getIzena() + "abizena: " + k.getAbizena()
+                System.out.println(dem + "\t id= " + k.getId() + "izena: " + k.getIzena() + "abizena: " + k.getAbizena()
                         + "adina: " + k.getAdina() + "dortsala: " + ((Futbolaria) k).getDortsala() + "demarkazioa: "
                         + ((Futbolaria) k).getDemarkazioa());
             }

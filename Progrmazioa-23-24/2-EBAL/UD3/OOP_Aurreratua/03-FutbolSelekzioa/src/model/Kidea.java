@@ -44,10 +44,12 @@ public class Kidea {
     public void setAdina(int adina) {
         this.adina = adina;
     }
-    public void elkartu(){
+
+    public void elkartu() {
         System.out.println(id + "elkartu da");
     }
-    public void bidaiatu(){
+
+    public void bidaiatu() {
         System.out.println(id + "bidai batera joan da");
     }
 }
