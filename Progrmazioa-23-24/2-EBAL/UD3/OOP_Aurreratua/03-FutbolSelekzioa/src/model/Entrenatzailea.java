@@ -1,9 +1,15 @@
 package model;
 
-public class Entrenatzailea {
+public class Entrenatzailea extends Kidea {
     private String idFederazioa;
+    private int dortsala;
 
-    public Entrenatzailea(String idFederazioa) {
+    public Entrenatzailea(int id, String izena, String abizena, int dortsala, String idFederazioa) {
+        super(id, izena, abizena, dortsala);
+        this.id = id;
+        this.izena = izena;
+        this.abizena = abizena;
+        this.dortsala = dortsala;
         this.idFederazioa = idFederazioa;
     }
 
@@ -15,11 +21,11 @@ public class Entrenatzailea {
         this.idFederazioa = idFederazioa;
     }
 
-    public Entrenatzailea entrenamenduaZuzendu() {
-        return null;
+    public void entrenamenduaZuzendu() {
+
     }
 
-    public Entrenatzailea partidaZuzendu() {
-        return null;
+    public void partidaZuzendu() {
+
     }
 }
