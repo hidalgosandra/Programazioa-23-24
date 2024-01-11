@@ -59,7 +59,8 @@ public class Selekzioa {
         System.out.println("==========================================");
         System.out.println("FUTBOLARIAK");
         System.out.println("-------------------");
-        String dem;
+        String dem = "";
+
         if (herria == Herria.eus) {
             for (Kidea k : kideak) {
                 if (Demarkazioa.POR.equals(((Futbolaria) k).getDemarkazioa())) {
@@ -69,10 +70,12 @@ public class Selekzioa {
                         || Demarkazioa.MED.equals(((Futbolaria) k).getDemarkazioa())) {
                     dem = "Futbolaria";
                 } else {
-
+                    System.out.println(".");
                 }
+                System.out.println(dem + "id= " + k.getId() + "izena: " + k.getIzena() + "abizena: " + k.getAbizena()
+                        + "adina: " + k.getAdina() + "dortsala: " + ((Futbolaria) k).getDortsala() + "demarkazioa: "
+                        + ((Futbolaria) k).getDemarkazioa());
             }
-            
             System.out.println("-------------------");
             System.out.println("Guztira: " + kideak.size() + " futbolari");
         }
