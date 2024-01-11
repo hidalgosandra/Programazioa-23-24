@@ -3,7 +3,7 @@ package model;
 public class Kidea {
     protected int id;
     protected String izena;
-    private String abizena;
+    protected String abizena;
     private int adina;
 
     public Kidea(int id, String izena, String abizena, int adina) {

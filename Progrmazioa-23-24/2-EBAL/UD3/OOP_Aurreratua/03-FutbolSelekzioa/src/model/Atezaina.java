@@ -13,4 +13,13 @@ public class Atezaina extends Futbolaria {
     public void golaGeratu() {
         geratutakoGolak = geratutakoGolak + 1;
     }
+
+    public int getGeratutakoGolak() {
+        return geratutakoGolak;
+    }
+
+    public void setGeratutakoGolak(int geratutakoGolak) {
+        this.geratutakoGolak = geratutakoGolak;
+    }
+    
 }

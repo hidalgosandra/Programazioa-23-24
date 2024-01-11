@@ -12,6 +12,10 @@ public class Futbolaria extends Kidea {
 
     public Futbolaria(int dortsala, String izena, String abizena, int adina, int id, Demarkazioa demarkazioa) {
         super(id, izena, abizena, adina);
+        this.id = id;
+        this.izena = izena;
+        this.abizena = abizena;
+        this.adina = adina;
         this.dortsala = dortsala;
         this.demarkazioa = demarkazioa;
     }
