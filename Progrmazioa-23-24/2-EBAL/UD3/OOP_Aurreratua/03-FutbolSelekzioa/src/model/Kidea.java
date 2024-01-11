@@ -3,7 +3,7 @@ package model;
 public class Kidea {
     protected int id;
     protected String izena;
-    protected String abizena;
+    private String abizena;
     private int adina;
 
     public Kidea(int id, String izena, String abizena, int adina) {
@@ -44,10 +44,12 @@ public class Kidea {
     public void setAdina(int adina) {
         this.adina = adina;
     }
-    public void elkartu(){
+
+    public void elkartu() {
         System.out.println(id + "elkartu da");
     }
-    public void bidaiatu(){
+
+    public void bidaiatu() {
         System.out.println(id + "bidai batera joan da");
     }
 }
