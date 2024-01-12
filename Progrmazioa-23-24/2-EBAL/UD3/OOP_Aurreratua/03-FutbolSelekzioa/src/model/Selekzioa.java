@@ -64,24 +64,6 @@ public class Selekzioa {
         System.out.println("SELEKZIOA: " + herria);
         System.out.println("==========================================");
         System.out.println("FUTBOLARIAK");
-<<<<<<< HEAD
-        System.out.println("------------");
-        for (Kidea k : kideak) {
-            if (k instanceof Atezaina) {
-                Atezaina ate = (Atezaina) k;
-                System.out.println(
-                        "Atezaina{id=" + ate.getId() + ", izena=" + ate.getIzena() + ", abizena=" + ate.getAbizena()
-                                + ", adina=" + ate.getAdina() + ", dortsala=" + ate.getDortsala() + ", geratutakoGolak="
-                                + ate.getGeratutakoGolak() + "}");
-            } else if (k instanceof Futbolaria) {
-                Futbolaria fut = (Futbolaria) k;
-                System.out.println(
-                        "Futbolaria{id=" + fut.getId() + ", izena=" + fut.getIzena() + ", abizena=" + fut.getAbizena()
-                                + ", adina=" + fut.getAdina() + ", dortsala=" + fut.getDortsala() + ", demarkazioa="
-                                + fut.getDemarkazioa() + "}");
-            } else {
-                break;
-=======
         System.out.println("-------------------");
         String dem = "";
 
@@ -96,39 +78,11 @@ public class Selekzioa {
                 } else {
                     System.out.println(".");
                 }
-                System.out.println(dem + "\t id= " + k.getId() + "izena: " + k.getIzena() + "abizena: " + k.getAbizena()
+                System.out.println(dem + "id= " + k.getId() + "izena: " + k.getIzena() + "abizena: " + k.getAbizena()
                         + "adina: " + k.getAdina() + "dortsala: " + ((Futbolaria) k).getDortsala() + "demarkazioa: "
                         + ((Futbolaria) k).getDemarkazioa());
->>>>>>> d03365570627f6ddbd625adcc7ca70290aa79b15
             }
         }
-
-        System.out.println("  Guztira: " + getFutbolariaKopurua() + " futbolari\n");
-
-        System.out.println("ENTRENATZAILEAK");
-        System.out.println("---------------");
-
-        for (Kidea k : kideak) {
-            if (k instanceof Entrenatzailea) {
-                Entrenatzailea entrenatzailea = (Entrenatzailea) k;
-                System.out
-                        .println("Entrenatzailea{id=" + entrenatzailea.getId() + ", izena=" + entrenatzailea.getIzena()
-                                + ", abizena=" + entrenatzailea.getAbizena() + ", adina=" + entrenatzailea.getAdina()
-                                + ", idFederazioa=" + entrenatzailea.getIdFederazioa() + "}");
-            }
-        }
-
-        System.out.println("  Guztira: " + getEntrenatzaileKopurua() + " entrenatzaile\n");
-    }
-
-    private int getFutbolariaKopurua() {
-        int futbolariaKopurua = 0;
-        for (Kidea k : kideak) {
-            if (k instanceof Futbolaria) {
-                futbolariaKopurua++;
-            }
-        }
-        return futbolariaKopurua;
     }
 
     private int getEntrenatzaileKopurua() {
