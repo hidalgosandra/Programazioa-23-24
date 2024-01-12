@@ -1,4 +1,4 @@
-package herentziamemberabstraktobarik.exekutagarriak;
+package herentziamemberabstraktoekin.exekutagarriak;
 
 import herentziamemberabstraktobarik.model.*;
 
