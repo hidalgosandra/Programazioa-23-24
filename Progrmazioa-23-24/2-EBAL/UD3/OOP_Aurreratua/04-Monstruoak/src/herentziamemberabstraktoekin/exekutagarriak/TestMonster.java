@@ -1,6 +1,6 @@
 package herentziamemberabstraktoekin.exekutagarriak;
 
-import herentziamemberabstraktobarik.model.*;
+import herentziamemberabstraktoekin.model.*;
 
 public class TestMonster {
     public static void main(String[] args) {
@@ -27,8 +27,8 @@ public class TestMonster {
         // Attack with stones!
 
         // We have a problem here!!!
-        Monster m4 = new Monster("u2u2");
-        System.out.println(m4.attack()); // garbage!!!
+        // Monster m4 = new Monster("u2u2");
+        // System.out.println(m4.attack()); // garbage!!!
         // !^_&^$@+%$* I don't know how to attack!
     }
 }
