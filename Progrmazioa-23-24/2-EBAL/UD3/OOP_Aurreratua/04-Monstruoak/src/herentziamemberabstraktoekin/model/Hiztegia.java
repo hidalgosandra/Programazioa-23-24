@@ -13,25 +13,25 @@ public class Hiztegia {
     }
 
     public static ArrayList<String> izenArruntak() {
-        izenArruntak.add("buru");
-        izenArruntak.add("belarri");
-        izenArruntak.add("zango");
-        izenArruntak.add("gorputz");
-        izenArruntak.add("aho");
-        izenArruntak.add("esku");
+        izenArruntak.add("Buru");
+        izenArruntak.add("Belarri");
+        izenArruntak.add("Zango");
+        izenArruntak.add("Gorputz");
+        izenArruntak.add("Aho");
+        izenArruntak.add("Esku");
         return izenArruntak;
     }
 
     public static ArrayList<String> adjetiboak() {
-        adjetiboak.add("handi");
-        adjetiboak.add("txiki");
-        adjetiboak.add("luze");
-        adjetiboak.add("labur");
-        adjetiboak.add("zikin");
-        adjetiboak.add("pozoitsu");
-        adjetiboak.add("lirain");
-        adjetiboak.add("eder");
-        adjetiboak.add("indartsu");
+        adjetiboak.add("Handi");
+        adjetiboak.add("Txiki");
+        adjetiboak.add("Luze");
+        adjetiboak.add("Labur");
+        adjetiboak.add("Zikin");
+        adjetiboak.add("Pozoitsu");
+        adjetiboak.add("Lirain");
+        adjetiboak.add("Eder");
+        adjetiboak.add("Indartsu");
         return adjetiboak;
     }
 
