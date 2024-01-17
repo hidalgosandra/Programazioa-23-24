@@ -1,4 +1,5 @@
 package herentziamemberabstraktoekin.model;
+import herentziamemberabstraktoekin.model.Hiztegia;
 
 /**
  * The superclass Monster defines the expected common behaviors for its
