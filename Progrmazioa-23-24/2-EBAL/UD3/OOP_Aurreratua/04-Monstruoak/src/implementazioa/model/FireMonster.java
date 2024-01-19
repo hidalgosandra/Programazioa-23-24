@@ -13,7 +13,7 @@ public class FireMonster implements Monstruosoa {
         return getIrudia() + "   Attack with fire!";
     }
 
-    public char getIrudia() {
+    public static char getIrudia() {
         return '\u2668';
     }
 }
