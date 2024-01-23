@@ -1,3 +1,5 @@
+package model;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import model.Produktua;
@@ -16,17 +18,19 @@ public class Erosketa {
     protected ArrayList<Produktua> produktuak = new ArrayList<Produktua>();
     protected ArrayList<Integer> unitateak = new ArrayList<Integer>();
     protected double guztira;
+    String kodeaS = new String(kodea);
+    String dataS = data.toString();
 
     public Erosketa(String kodea, Bezeroa eroslea, double guztira) {
-        this.kodea = kodea;
+        this.kodeaS = kodea;
         this.eroslea = eroslea;
         this.guztira = guztira;
     }
 
     public Erosketa(String kodea, String data, Bezeroa eroslea, ArrayList<Produktua> produktuak,
             ArrayList<Integer> unitateak, double guztira) {
-        this.kodea = kodea;
-        this.data = data;
+        this.kodeaS = kodea;
+        this.dataS = data;
         this.eroslea = eroslea;
         this.produktuak = produktuak;
         this.unitateak = unitateak;
@@ -34,14 +38,14 @@ public class Erosketa {
     }
 
     public String toString() {
-
+        return "";
     }
 
     public String toStringLuzea() {
-
+        return "";
     }
 
     public boolean guztiraEgiaztatu() {
-
+        return false;
     }
 }

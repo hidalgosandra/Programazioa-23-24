@@ -2,7 +2,7 @@ package exekutagarriak;
 import model.Pertsona;
 public class KarlosSortu {
     public static void main(String[] args) {
-        Pertsona karlos = new Pertsona("Karlos", "Arg", "ks@gmail.com", 2, "Zarautz");
-        System.out.println(karlos);
+        Pertsona karlos = new Pertsona(1, "Karlos", "Argi", "ag@gmail.com", "Zarautz");
+        System.out.println();
     }
 }

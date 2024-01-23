@@ -8,13 +8,12 @@ public class EpekakoErosketa extends Erosketa {
     private double kuota;
 
     public double gainetikOrdainduBeharrekoa() {
-
+        return 0.0;
     }
 
-    public EpekakoErosketa(String kodea, String data, Bezeroa eroslea, ArrayList<Produktuak> produktuak,
+    public EpekakoErosketa(String kodea, String data, Bezeroa eroslea, ArrayList<Produktua> produktuak,
             ArrayList<Integer> unitateak, double guztira, double kuota) {
-        super(kodea, data, eroslea, produktuak, unitateak);
-        this.guztira = guztira;
+        super(kodea, data, eroslea, produktuak, unitateak, guztira);
         this.kuota = kuota;
     }
 }

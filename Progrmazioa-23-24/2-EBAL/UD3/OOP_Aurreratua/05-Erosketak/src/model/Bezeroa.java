@@ -1,7 +1,15 @@
+package model;
+
+import model.*;
+
 public abstract class Bezeroa {
     private int kodea;
     private String helbidea;
 
+    public Bezeroa(int kodea, String helbidea){
+        this.kodea = kodea;
+        this.helbidea = helbidea;
+    }
     public int getKodea() {
         return kodea;
     }
@@ -11,11 +19,11 @@ public abstract class Bezeroa {
     }
 
     public String getIzena() {
-        return izenKomertziala;
+        return null;
     }
 
     public String getEmaila() {
-        return emaila;
+        return null;
     }
 
     public void setKodea(int kodea) {

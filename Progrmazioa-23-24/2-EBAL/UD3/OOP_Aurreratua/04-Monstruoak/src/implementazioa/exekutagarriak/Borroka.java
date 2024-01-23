@@ -8,7 +8,6 @@ import implementazioa.model.WaterMonster;
 import implementazioa.model.FireMonster;
 import implementazioa.model.StoneMonster;
 import implementazioa.model.Ejerzitoa;
-import implementazioa.model.Monstruosoa;
 
 public class Borroka {
     private static LocalDateTime noiz;

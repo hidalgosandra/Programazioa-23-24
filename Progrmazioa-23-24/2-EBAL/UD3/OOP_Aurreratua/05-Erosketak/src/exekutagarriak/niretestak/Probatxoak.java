@@ -1,5 +1,7 @@
 package exekutagarriak.niretestak;
 
+import java.util.ArrayList;
+
 import model.*;
 
 public class Probatxoak {
@@ -10,9 +12,9 @@ public class Probatxoak {
         Produktua toshiba = new Produktua("C01", "Toshiba Satellite Pro", 450);
         System.out.println("toshiba => " + toshiba);
 
-        ArrayList<Produktua> erosketaHonetakoproduktuak = new ArrayList<>();
+        ArrayList<Produktua> erosketaHonetakoproduktuak = new ArrayList<Produktua>();
         erosketaHonetakoproduktuak.add(toshiba);
-        ArrayList<Integer> erosketaHonetakounitateak = new ArrayList<>();
+        ArrayList<Integer> erosketaHonetakounitateak = new ArrayList<Integer>();
         erosketaHonetakounitateak.add(15);
         Erosketa gaurkoErosketa = new Erosketa("E18-02", "2018-10-24", karlos,
                 erosketaHonetakoproduktuak, erosketaHonetakounitateak, 6750);
