@@ -5,7 +5,7 @@ public class Pertsona extends Bezeroa {
     private String abizena;
     private String emaila;
 
-    public Pertsona(int kodea, String izena, String abizena, String emaila,  String helbidea) {
+    public Pertsona(int kodea, String izena, String abizena, String emaila, String helbidea) {
         super(kodea, helbidea);
         this.izena = izena;
         this.abizena = abizena;
@@ -23,5 +23,5 @@ public class Pertsona extends Bezeroa {
     public String getEmaila() {
         return emaila;
     }
-    
+
 }

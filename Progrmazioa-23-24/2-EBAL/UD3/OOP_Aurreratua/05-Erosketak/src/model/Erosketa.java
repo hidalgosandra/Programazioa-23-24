@@ -2,8 +2,7 @@ package model;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
-import model.Produktua;
-import model.Bezeroa;
+import model.*;
 
 /*Erosketa kodea
  * E18-02
@@ -40,6 +39,10 @@ public class Erosketa {
     }
 
     public String toStringLuzea() {
+        System.out.println("EROSKETA");
+        System.out.println("Kodea: " + kodea + "Data: " + data);
+        System.out.println("Bezeroa: " + kodea);
+        System.out.println("Izena: " + eroslea.getIzena());
         return "";
     }
 
