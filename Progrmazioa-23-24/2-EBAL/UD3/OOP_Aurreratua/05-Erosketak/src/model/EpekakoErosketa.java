@@ -8,7 +8,7 @@ public class EpekakoErosketa extends Erosketa {
     private double kuota;
 
     public double gainetikOrdainduBeharrekoa() {
-        return 0.0;
+        return kuota * epeak - guztira;
     }
 
     public EpekakoErosketa(String kodea, String data, Bezeroa eroslea, ArrayList<Produktua> produktuak,

@@ -18,19 +18,17 @@ public class Erosketa {
     protected ArrayList<Produktua> produktuak = new ArrayList<Produktua>();
     protected ArrayList<Integer> unitateak = new ArrayList<Integer>();
     protected double guztira;
-    String kodeaS = new String(kodea);
-    String dataS = data.toString();
 
     public Erosketa(String kodea, Bezeroa eroslea, double guztira) {
-        this.kodeaS = kodea;
+        this.kodea = kodea.toCharArray();
         this.eroslea = eroslea;
         this.guztira = guztira;
     }
 
     public Erosketa(String kodea, String data, Bezeroa eroslea, ArrayList<Produktua> produktuak,
             ArrayList<Integer> unitateak, double guztira) {
-        this.kodeaS = kodea;
-        this.dataS = data;
+        this.kodea = kodea.toCharArray();
+        this.data = LocalDate.parse(data);
         this.eroslea = eroslea;
         this.produktuak = produktuak;
         this.unitateak = unitateak;
