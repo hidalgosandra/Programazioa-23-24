@@ -6,7 +6,7 @@ public abstract class Bezeroa {
     private int kodea;
     private String helbidea;
 
-    public Bezeroa(int kodea, String izena){
+    public Bezeroa(int kodea, String izena, String helbidea){
         this.kodea = kodea;
         this.helbidea = helbidea;
     }

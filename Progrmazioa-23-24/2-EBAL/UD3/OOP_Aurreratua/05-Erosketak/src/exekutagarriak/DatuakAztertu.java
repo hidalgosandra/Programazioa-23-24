@@ -10,7 +10,9 @@ public class DatuakAztertu {
         private static ArrayList<Erosketa> erosketenZerrenda = new ArrayList<Erosketa>();
 
         public static void main(String[] args) {
-
+                initialize();
+                erosketakBezeroka();
+                helbideaBilatu();
         }
 
         /**
@@ -199,18 +201,22 @@ public class DatuakAztertu {
                 return null;
         }
 
-        public void helbideaBilatu() {
+        public static void helbideaBilatu() {
                 for (int i = 0; i < kontaktuak.size(); i++) {
                         System.out.println(kontaktuak.get(i).getHelbidea());
                 }
         }
 
-        public void erosketakBezeroka() {
-                for (int b = 0; b < kontaktuak.size() && b < erosketenZerrenda.size(); b++) {
-                        System.out.println(kontaktuak.get(b).getKodea());
-                        System.out.println(erosketenZerrenda.get(b));
-                        System.out.println("BEZEROAREN LABURPENA: ");
+        public static void erosketakBezeroka() {
+                for (int i = 0; i < kontaktuak.size(); i++) {
+                        System.out.printf("Kodea: %s, Izena: %s, Abizena: %s, Helbidea: %s", kontaktuak.get(i).getKodea(), kontaktuak.get(i).getIzena(),
+                                        ((Pertsona) kontaktuak.get(i)).getAbizena(),
+                                        ((Pertsona) kontaktuak.get(i)).getHelbidea());
+                        for (int b = 0; b < kontaktuak.size() && b < erosketenZerrenda.size(); b++) {
+                                System.out.println(erosketenZerrenda.get(b));
+                        }
                 }
+                System.out.println("BEZEROAREN LABURPENA: ");
         }
 
         public void erosketaKopuruUrteEtaHilabeteko() {

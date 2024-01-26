@@ -8,7 +8,7 @@ public class Enpresa extends Bezeroa {
 
     public Enpresa(int kodea, String izenJuridikoa, String izenKomertziala, String helbidea,
             String[] kontaktoenEmailak) {
-        super(kodea, helbidea);
+        super(kodea, izenJuridikoa, helbidea);
         this.izenJuridikoa = izenJuridikoa;
         this.izenKomertziala = izenKomertziala;
         this.kontaktoenEmailak = kontaktoenEmailak;
