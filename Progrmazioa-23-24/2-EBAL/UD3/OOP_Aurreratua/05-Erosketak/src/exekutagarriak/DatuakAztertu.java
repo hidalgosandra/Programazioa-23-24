@@ -12,7 +12,6 @@ public class DatuakAztertu {
         public static void main(String[] args) {
                 initialize();
                 erosketakBezeroka();
-                helbideaBilatu();
         }
 
         /**

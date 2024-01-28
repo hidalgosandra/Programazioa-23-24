@@ -35,18 +35,29 @@ public class Erosketa {
     }
 
     public String toString() {
-        return "";
+        return "\tEROSKETA  \n\tKodea: " + new String(kodea) + "\n\tData:" + data + "\n\teroslea: " + eroslea
+                + "\n\tproduktuak: " + produktuak + "\n\tunitateak: " + unitateak + "\n\tguztira: " + guztira;
     }
 
     public String toStringLuzea() {
         System.out.println("EROSKETA");
-        System.out.println("Kodea: " + kodea + "Data: " + data);
-        System.out.println("Bezeroa: " + kodea);
+        for (int i = 0; i < kodea.length; i++) {
+        }
+        System.out.println("Kodea: " + new String(kodea) + "Data: " + data);
+        System.out.println("Bezeroa: " + new String(kodea));
         System.out.println("Izena: " + eroslea.getIzena());
         return "";
     }
 
     public boolean guztiraEgiaztatu() {
-        return false;
+        double total = 0;
+        for (int i = 0; i < unitateak.size(); i++) {
+            total = total + unitateak.get(i);
+        }
+        if (total == guztira) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
