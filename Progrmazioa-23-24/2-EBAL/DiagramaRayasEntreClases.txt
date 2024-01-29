@@ -1,6 +1,13 @@
+Klase abstraktoa:
+    - Abstract --> abstract public class "Klase izena"
+
+Klase interface:
+    - Interface --> public interface "Klase izena"
+
 Klaseen arteko marra gezi baten bukatzen badu:
-    - Marra Jarraia: Herentzia --> "Klase izena" extends "Klase Aita"
-    - Marra Etena: Inplementazioa --> "Klase izena" implements "Klase algo"
+    - Marra Jarraia: Herentzia --> public class "Klase izena" extends "Aita klase izena"
+    - Marra Etena: Inplementazioa --> public class "Klase izena" implements "Aita klase izena"
+
 Klaseen arteko marra errombo baten bukatzen du:
     - Transparente: Agregación --> Motor.java "class Motor" || Auto.java "class Auto {
 										private Motor motor
