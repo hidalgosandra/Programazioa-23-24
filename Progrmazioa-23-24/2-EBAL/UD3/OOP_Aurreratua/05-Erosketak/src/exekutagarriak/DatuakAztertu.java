@@ -17,7 +17,6 @@ public class DatuakAztertu {
         /**
          * 
          * Metodo honek kontaktuak, produktuKatalogoa eta erosketenZerrenda
-         * 
          * arraylistak hasieratzen ditu... pdf-ko datuekin... eta gehiagorekin
          * 
          */
@@ -190,7 +189,7 @@ public class DatuakAztertu {
                 double fak = 0.0;
                 for (Erosketa e : erosketenZerrenda) {
                         if (e.getClass().getSimpleName().equals("EpekakoErosketa")) {
-                                fak = fak + ((EpekakoErosketa) e).gainetikOrdainduBeharkoa();
+                                fak = fak + ((EpekakoErosketa) e).gainetikOrdainduBeharrekoa();
                         }
                 }
                 return fak;
