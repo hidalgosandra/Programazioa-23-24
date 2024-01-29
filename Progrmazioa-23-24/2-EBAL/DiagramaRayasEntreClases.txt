@@ -1,0 +1,14 @@
+Klaseen arteko marra gezi baten bukatzen badu:
+    - Marra Jarraia: Herentzia --> "Klase izena" extends "Klase Aita"
+    - Marra Etena: Inplementazioa --> "Klase izena" implements "Klase algo"
+Klaseen arteko marra errombo baten bukatzen du:
+    - Transparente: Agregación --> Motor.java "class Motor" || Auto.java "class Auto {
+										private Motor motor
+											}"
+    - Fondo negro: Composición --> Motor.java "class Motor" || Auto.java "class Auto { 
+										private Motor motor
+											} 
+									 "constructor Auto{
+										this.motor = new Motor();
+											}
+									

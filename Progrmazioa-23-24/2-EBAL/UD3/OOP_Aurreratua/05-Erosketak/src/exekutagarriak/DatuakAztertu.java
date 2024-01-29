@@ -187,10 +187,13 @@ public class DatuakAztertu {
         }
 
         public double fakturazioOsoa() {
-                for (int i = 0; i < erosketenZerrenda.size(); i++) {
-                        erosketenZerrenda.get(i);
+                double fak = 0.0;
+                for (Erosketa e : erosketenZerrenda) {
+                        if (e.getClass().getSimpleName().equals("EpekakoErosketa")) {
+                                fak = fak + ((EpekakoErosketa) e).gainetikOrdainduBeharkoa();
+                        }
                 }
-                return 0.0;
+                return fak;
         }
 
         public Bezeroa bezerorikOnena() {
@@ -208,7 +211,8 @@ public class DatuakAztertu {
 
         public static void erosketakBezeroka() {
                 for (int i = 0; i < kontaktuak.size(); i++) {
-                        System.out.printf("Kodea: %s, Izena: %s, Abizena: %s, Helbidea: %s", kontaktuak.get(i).getKodea(), kontaktuak.get(i).getIzena(),
+                        System.out.printf("Kodea: %s, Izena: %s, Abizena: %s, Helbidea: %s",
+                                        kontaktuak.get(i).getKodea(), kontaktuak.get(i).getIzena(),
                                         ((Pertsona) kontaktuak.get(i)).getAbizena(),
                                         ((Pertsona) kontaktuak.get(i)).getHelbidea());
                         for (int b = 0; b < kontaktuak.size() && b < erosketenZerrenda.size(); b++) {
