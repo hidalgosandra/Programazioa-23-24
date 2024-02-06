@@ -10,7 +10,6 @@ public class Zatikia {
     }
 
     public Zatikia(int zenbakitzailea, int izendatzailea) {
-        this.zenbakitzailea = zenbakitzailea;
         this.izendatzailea = izendatzailea;
     }
 
