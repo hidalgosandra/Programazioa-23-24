@@ -16,6 +16,7 @@ public class Herriak {
     public Herriak() {
     }
 
+    // Konektatu DatuBasera
     public Connection konektatu() {
         String url = "jdbc:mariadb://" + server + "/" + db;
         Connection conn = null;
@@ -29,6 +30,7 @@ public class Herriak {
         return conn;
     }
 
+    // Irakurri datu bat
     public void irakurriDatuBakarra() {
         String sql = "SELECT COUNT(*) AS Kopurua FROM " + taula;
         // try-with-resources (closes all the resources when try finishes)
@@ -42,6 +44,26 @@ public class Herriak {
         }
     }
 
+    // Datu asko irakurri
+    public void irakurriDatuAnitzak() {
+        String eremua = "Herria";
+        String sql = "SELECT * FROM " + taula;
+
+        try (Connection conn = konektatu();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            System.out.println(eremua);
+            System.out.println("=====================================");
+            ResultSet rs = pstmt.executeQuery();
+            // loop through the result set
+            while (rs.next()) {
+                System.out.println(rs.getString(eremua));
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // Insert into bat egin
     public void txertatu(String izenBerria) {
         String eremua = "Herria";
         String sql = "INSERT INTO " + taula + "(" + eremua + ") VALUES(?)";
@@ -55,6 +77,7 @@ public class Herriak {
         }
     }
 
+    // Update bat egin
     public void aldatu(String izenZaharra, String izenBerria) {
         String eremua = "Herria";
         String sql = "UPDATE " + taula + " SET " + eremua + "= ? WHERE " + eremua + " = ?";
@@ -64,6 +87,20 @@ public class Herriak {
             pstmt.setString(2, izenZaharra);
             pstmt.executeUpdate();
             System.out.println(izenZaharra + " izena, " + izenBerria + " izenagatik aldatu da");
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
+    // Delete bat egin
+    public void ezabatu(String izena) {
+        String eremua = "Herria";
+        String sql = "DELETE FROM " + taula + " WHERE " + eremua + " = ?";
+        try (Connection conn = konektatu();
+                PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, izena);
+            pstmt.executeUpdate();
+            System.out.println("Erregistroa ezabatu da.");
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         }
