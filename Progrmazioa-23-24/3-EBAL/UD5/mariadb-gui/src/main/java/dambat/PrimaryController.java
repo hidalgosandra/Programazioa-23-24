@@ -5,8 +5,7 @@ import javafx.fxml.FXML;
 
 public class PrimaryController {
 
-
-    private void connect(){
+    private void connect() {
 
     }
 
@@ -14,12 +13,29 @@ public class PrimaryController {
     private void switchToSecondary() throws IOException {
         App.setRoot("secondary");
     }
+
     @FXML
-    private void sel(){
+    private void Sel() {
 
     }
+
     @FXML
-    private void SelCount(){
+    private void SelCount() {
+
+    }
+
+    @FXML
+    private void Update() {
+
+    }
+
+    @FXML
+    private void Insert() {
+
+    }
+
+    @FXML
+    private void Delete() {
 
     }
 }
