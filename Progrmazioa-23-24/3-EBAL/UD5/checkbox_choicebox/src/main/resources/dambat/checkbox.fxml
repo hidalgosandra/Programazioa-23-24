@@ -5,9 +5,12 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.VBox?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Checkbox">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+   xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Checkbox">
    <children>
       <Label layoutX="58.0" layoutY="44.0" text="CheckBox (ak lantzeko eszena)">
          <font>
@@ -19,13 +22,14 @@
             <Font size="14.0" />
          </font>
       </Label>
+
+      <VBox fx:id="checkboxContainer" layoutX="100.0" layoutY="150.0" spacing="10"/>
+
       <Button layoutX="217.0" layoutY="311.0" mnemonicParsing="false" onAction="#SwitchHasierakoa" prefHeight="42.0" prefWidth="108.0" text="Atzera">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <CheckBox layoutX="83.0" layoutY="143.0" mnemonicParsing="false" text="Eibar" />
-      <CheckBox layoutX="83.0" layoutY="222.0" mnemonicParsing="false" text="Zaldibar" />
-      <CheckBox layoutX="83.0" layoutY="183.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="66.0" text="Ermua" />
+
    </children>
 </Pane>
