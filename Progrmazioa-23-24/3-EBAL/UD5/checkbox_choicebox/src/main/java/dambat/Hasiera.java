@@ -10,7 +10,6 @@ public class Hasiera {
     @FXML
     private javafx.scene.control.Button irten;
 
-
     @FXML
     private void SwitchCheckBox() throws IOException {
         App.setRoot("checkbox");
@@ -19,6 +18,16 @@ public class Hasiera {
     @FXML
     private void SwitchChoiceBox() throws IOException {
         App.setRoot("choicebox");
+    }
+
+    @FXML
+    private void SwitchTextArea() throws IOException {
+        App.setRoot("textarea");
+    }
+
+    @FXML
+    private void SwitchTableView() throws IOException {
+        App.setRoot("tableview");
     }
 
     @FXML

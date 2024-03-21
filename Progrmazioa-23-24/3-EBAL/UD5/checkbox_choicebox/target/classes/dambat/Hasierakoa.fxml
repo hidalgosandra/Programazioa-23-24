@@ -2,19 +2,29 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Hasiera">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Hasiera">
    <children>
       <Label layoutX="51.0" layoutY="47.0" text="JavaFX kontrolak ezagutzen:">
          <font>
             <Font size="22.0" />
          </font>
       </Label>
-      <Button layoutX="118.0" layoutY="127.0" mnemonicParsing="false" onAction="#SwitchCheckBox" prefHeight="32.0" prefWidth="96.0" text="CheckBox" />
-      <Button layoutX="118.0" layoutY="200.0" mnemonicParsing="false" onAction="#SwitchChoiceBox" prefHeight="32.0" prefWidth="96.0" text="ChoiceBox" />
-      <Button layoutX="250.0" layoutY="300.0" mnemonicParsing="false" onAction="#irten" fx:id="irten" prefHeight="32.0" prefWidth="96.0" text="IRTEN" />
+      <Button layoutX="118.0" layoutY="120.0" mnemonicParsing="false" onAction="#SwitchCheckBox" prefHeight="32.0" prefWidth="96.0" text="CheckBox" />
+      <Button layoutX="118.0" layoutY="180.0" mnemonicParsing="false" onAction="#SwitchChoiceBox" prefHeight="32.0" prefWidth="96.0" text="ChoiceBox" />
+      <Button layoutX="118.0" layoutY="240.0" mnemonicParsing="false" onAction="#SwitchTextArea" prefHeight="32.0" prefWidth="96.0" text="TextArea" />
+      <Button layoutX="118.0" layoutY="300.0" mnemonicParsing="false" onAction="#SwitchTableView" prefHeight="32.0" prefWidth="96.0" text="TableView" />
+      <Button fx:id="irten" layoutX="250.0" layoutY="380.0" mnemonicParsing="false" onAction="#irten" prefHeight="32.0" prefWidth="96.0" text="IRTEN" />
    </children>
+   <effect>
+      <InnerShadow choke="0.58" height="56.73" radius="30.79" width="68.43">
+         <color>
+            <Color red="0.39012864232063293" green="0.9789473414421082" blue="0.3480701744556427" opacity="0.8999999761581421" />
+         </color>
+      </InnerShadow>
+   </effect>
 </Pane>

@@ -4,13 +4,12 @@
 <?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.InnerShadow?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-   xmlns="http://javafx.com/javafx/21"
-   xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Choicebox">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: green;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Choicebox">
    <children>
       <Label layoutX="68.0" layoutY="60.0" text="ChoiceBox (ak lantzeko eszena)">
          <font>
@@ -37,4 +36,11 @@
          </font>
       </Button>
    </children>
+   <effect>
+      <InnerShadow choke="0.28" height="51.41" radius="27.545" width="60.77">
+         <color>
+            <Color red="0.8227192759513855" green="0.8736842274665833" blue="0.262105256319046" />
+         </color>
+      </InnerShadow>
+   </effect>
 </Pane>
