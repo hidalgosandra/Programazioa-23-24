@@ -21,8 +21,8 @@ public class Checkbox {
 
     @FXML
     private void initialize() {
-        Herriak instance = new Herriak();
-        List<String> datos = instance.irakurriItzuliDatuak();
+        Herriak herria = new Herriak();
+        List<String> datos = herria.irakurriItzuliDatuak();
         for (String dato : datos) {
             CheckBox ncheckbox = new CheckBox(dato);
             ncheckbox.setStyle("-fx-margin: 10;");

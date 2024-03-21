@@ -8,7 +8,9 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Choicebox">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+   xmlns="http://javafx.com/javafx/21"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="dambat.Choicebox">
    <children>
       <Label layoutX="68.0" layoutY="60.0" text="ChoiceBox (ak lantzeko eszena)">
          <font>
@@ -20,13 +22,15 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <ChoiceBox layoutX="300.0" layoutY="108.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="choiceBox" layoutX="300.0" layoutY="108.0" prefWidth="150.0" />
       <Label layoutX="68.0" layoutY="187.0" prefHeight="27.0" prefWidth="263.0" text="Non biziko zinateke gustora? (ComboBox)">
          <font>
             <Font size="14.0" />
          </font>
       </Label>
-      <ComboBox layoutX="356.0" layoutY="188.0" prefWidth="150.0" />
+
+      <ComboBox fx:id="comboBox" layoutX="356.0" layoutY="188.0" />
+
       <Button layoutX="235.0" layoutY="302.0" mnemonicParsing="false" onAction="#SwitchHasierakoa" prefHeight="42.0" prefWidth="108.0" text="Atzera">
          <font>
             <Font size="18.0" />
