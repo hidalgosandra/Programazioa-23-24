@@ -12,7 +12,7 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.layout.VBox;
 
-public class Choicebox {
+public class Choiceboxcombobox {
 
     @FXML
     private VBox choiceboxContainer;

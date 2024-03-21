@@ -17,7 +17,7 @@ public class Hasiera {
 
     @FXML
     private void SwitchChoiceBox() throws IOException {
-        App.setRoot("choicebox");
+        App.setRoot("choiceboxcombobox");
     }
 
     @FXML
