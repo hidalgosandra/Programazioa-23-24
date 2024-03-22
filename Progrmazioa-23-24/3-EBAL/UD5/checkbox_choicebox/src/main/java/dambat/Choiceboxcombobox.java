@@ -17,7 +17,6 @@ public class Choiceboxcombobox {
     @FXML
     private VBox choiceboxContainer;
 
-    @SuppressWarnings("rawtypes")
     @FXML
     private ComboBox comboboxContainer;
 
@@ -34,6 +33,7 @@ public class Choiceboxcombobox {
         for (String dato : datos) {
             nChoiceBox.getItems().add(dato);
         }
+        choiceboxContainer.getChildren().add(nChoiceBox);
     }
 
     @FXML
